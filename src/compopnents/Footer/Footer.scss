@@ -1,26 +1,116 @@
 .footer {
-	background-color: #494949;
-	&__logo {}
-	&__terms {}
-	&__help {}
-	&__subscribe {}
-	&__social {}
+  padding: 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #494949;
+  color: #ffffff;
+  font-size: 16px;
+  line-height: 24px;
+  flex-wrap: wrap;
+
+  a {
+    color: #ffffff;
+    transition: all 0.1s ease 0.1s;
+    &:hover {
+      color: #b2bbc4;
+    }
+  }
+
+  &__logo {
+    max-width: 120px;
+    margin: 0 2% 0 0;
+    & img {
+      width: 67px;
+    }
+  }
+
+  &__terms {
+    max-width: 120px;
+    margin: 0 2% 0 0;
+  }
+
+  &__help {
+    margin: 0 2% 0 0;
+  }
+
+  &__subscribe {
+    margin: 0 2% 0 0;
+    min-width: 270px;
+  }
+
+  &__social {
+  }
 }
+
 .help {
-	&__title {}
-	&__list {}
+  max-width: 165px;
+
+  &__title {
+    color: #b2bbc4;
+    text-transform: uppercase;
+    font-size: 14px;
+  }
+
+  &__list {
+
+  }
 }
+
 .subscribe {
-	&__title {}
-	&__container {}
-	&__input {}
-	&__submit {}
+
+  &__title {
+    color: #b2bbc4;
+    font-size: 20px;
+    margin-bottom: 10px;
+  }
+
+  &__form {
+    border: 1px solid #b2bbc4;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 0;
+    line-height: 0;
+  }
+
+  &__input {
+    flex: 1 1 auto;
+    margin: 15px 0 15px 15px;
+
+    input {
+      width: 100%;
+      font-size: 16px;
+      background-color: #494949;
+      font-family: Karla;
+      color: #b2bbc4;
+
+      &::after {
+        box-sizing: border-box;
+        margin: 0;
+        padding: 0;
+      }
+    }
+  }
+
+  &__submit {
+    margin: auto 5px;
+  }
 }
+
 .social {
-	fill: #ffffff;
-	width: 34px;
-	height: 34px;
-	&__inst {}
-	&__fb {}
-	&__tw {}
+  display: flex;
+  font-size: 0;
+  margin: 15px 0;
+
+  &__link {
+    height: 34px;
+    width: 34px;
+    fill: #ffffff;
+    margin: 0 7.5px;
+    transition: all 0.3s ease 0.3s;
+    &:hover {
+      fill: #b2bbc4;
+    }
+  }
 }
