@@ -12,6 +12,7 @@
   a {
     color: #ffffff;
     transition: all 0.1s ease 0.1s;
+
     &:hover {
       color: #b2bbc4;
     }
@@ -19,6 +20,7 @@
 
   &__logo {
     max-width: 120px;
+
     & img {
       width: 67px;
     }
@@ -81,12 +83,6 @@
       background-color: #494949;
       font-family: Karla;
       color: #b2bbc4;
-
-      &::after {
-        box-sizing: border-box;
-        margin: 0;
-        padding: 0;
-      }
     }
   }
 
@@ -106,6 +102,7 @@
     fill: #ffffff;
     margin: 0 7.5px;
     transition: all 0.3s ease 0.3s;
+
     &:hover {
       fill: #b2bbc4;
     }
