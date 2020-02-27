@@ -1,7 +1,7 @@
 import React from 'react';
 import logo from "./img/footer.svg"
 import arrow_right from "./img/arrow_right.png"
-import "./Footer.scss"
+import "./footer.scss"
 
 const Footer = () => {
   return (
