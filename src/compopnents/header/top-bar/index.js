@@ -10,7 +10,7 @@ const TopBar = () => {
       </a>
       <div className="top-bar__right">
         <div className="top-bar__auth">
-          <a href="#">Login | SignUpa</a>
+          <a href="#">Login | SignUp</a>
         </div>
         <div className="top-bar__cart">
           <a href="#">Cart</a>
