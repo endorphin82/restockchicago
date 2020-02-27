@@ -1,26 +1,23 @@
 {
   "files": {
-    "main.css": "./static/css/main.3ec1dabc.chunk.css",
-    "main.js": "./static/js/main.8dd5ff67.chunk.js",
-    "main.js.map": "./static/js/main.8dd5ff67.chunk.js.map",
+    "main.css": "./static/css/main.5098aeda.chunk.css",
+    "main.js": "./static/js/main.0ee93ec7.chunk.js",
+    "main.js.map": "./static/js/main.0ee93ec7.chunk.js.map",
     "runtime-main.js": "./static/js/runtime-main.4c9707ea.js",
     "runtime-main.js.map": "./static/js/runtime-main.4c9707ea.js.map",
     "static/css/2.cd67af34.chunk.css": "./static/css/2.cd67af34.chunk.css",
-    "static/js/2.61083927.chunk.js": "./static/js/2.61083927.chunk.js",
-    "static/js/2.61083927.chunk.js.map": "./static/js/2.61083927.chunk.js.map",
+    "static/js/2.ff6dd939.chunk.js": "./static/js/2.ff6dd939.chunk.js",
+    "static/js/2.ff6dd939.chunk.js.map": "./static/js/2.ff6dd939.chunk.js.map",
     "index.html": "./index.html",
-    "precache-manifest.368d031ccc237fde1106e68c5667bbbc.js": "./precache-manifest.368d031ccc237fde1106e68c5667bbbc.js",
+    "precache-manifest.ad9e4253f58bcf77fa69b74fc287db57.js": "./precache-manifest.ad9e4253f58bcf77fa69b74fc287db57.js",
     "service-worker.js": "./service-worker.js",
     "static/css/2.cd67af34.chunk.css.map": "./static/css/2.cd67af34.chunk.css.map",
-    "static/css/main.3ec1dabc.chunk.css.map": "./static/css/main.3ec1dabc.chunk.css.map",
-    "static/js/2.61083927.chunk.js.LICENSE.txt": "./static/js/2.61083927.chunk.js.LICENSE.txt",
-    "static/media/adidas.svg": "./static/media/adidas.71c8c727.svg",
+    "static/css/main.5098aeda.chunk.css.map": "./static/css/main.5098aeda.chunk.css.map",
+    "static/js/2.ff6dd939.chunk.js.LICENSE.txt": "./static/js/2.ff6dd939.chunk.js.LICENSE.txt",
+    "static/media/styles.scss": "./static/media/r-background.0ce12a17.svg",
     "static/media/ei-search.svg": "./static/media/ei-search.5203e9f8.svg",
     "static/media/footer.svg": "./static/media/footer.c45fc687.svg",
     "static/media/header.svg": "./static/media/header.f4c1dddb.svg",
-    "static/media/jumpman.svg": "./static/media/jumpman.7cf22dbb.svg",
-    "static/media/nike_sport.svg": "./static/media/nike_sport.51c8d918.svg",
-    "static/media/styles.scss": "./static/media/r-background.0ce12a17.svg",
     "static/media/slide-1.png": "./static/media/slide-1.5a137405.png",
     "static/media/slide-2.png": "./static/media/slide-2.ffa38a8d.png",
     "static/media/slide-3.png": "./static/media/slide-3.5fc81cee.png"
@@ -28,8 +25,8 @@
   "entrypoints": [
     "static/js/runtime-main.4c9707ea.js",
     "static/css/2.cd67af34.chunk.css",
-    "static/js/2.61083927.chunk.js",
-    "static/css/main.3ec1dabc.chunk.css",
-    "static/js/main.8dd5ff67.chunk.js"
+    "static/js/2.ff6dd939.chunk.js",
+    "static/css/main.5098aeda.chunk.css",
+    "static/js/main.0ee93ec7.chunk.js"
   ]
 }
