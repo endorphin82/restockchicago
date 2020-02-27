@@ -1,4 +1,4 @@
-import {TOGGELE_BURGER_MENU} from "../AC/ActionTypes";
+import {TOGGLE_BURGER_MENU} from "../AC/ActionTypes";
 
 const initialState = {
   isOpen: false
@@ -6,7 +6,7 @@ const initialState = {
 
 export default (state = initialState, action) => {
   switch (action.type) {
-    case TOGGELE_BURGER_MENU:
+    case TOGGLE_BURGER_MENU:
       return {
         ...state,
         isOpen: !state.isOpen
