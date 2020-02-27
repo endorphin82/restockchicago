@@ -1,0 +1,38 @@
+.header {
+  &__top-bar {
+  }
+}
+
+.top-bar {
+  background-color: #F7F7F8;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 10px 10px 35px;
+
+  &__right {
+    display: flex;
+    flex-wrap: nowrap;
+  }
+
+  &__logo img {
+    height: 30px;
+    max-width: 300px;
+  }
+
+  a {
+    color: #494949;
+    font-size: 16px;
+    font-style: normal;
+    margin: 0 35px 0 0;
+    &:hover {
+      text-decoration: underline;
+    }
+  }
+
+  &__auth {
+  }
+
+  &__cart {
+  }
+}

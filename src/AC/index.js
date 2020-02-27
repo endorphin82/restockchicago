@@ -1,5 +1,5 @@
-import {TOGGELE_BURGER_MENU} from "./ActionTypes";
+import {TOGGLE_BURGER_MENU} from "./ActionTypes";
 
 export const ToggleBurger = () => ({
-  type: TOGGELE_BURGER_MENU
+  type: TOGGLE_BURGER_MENU
 })
