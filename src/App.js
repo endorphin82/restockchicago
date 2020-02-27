@@ -1,12 +1,16 @@
 import React from 'react';
+import {Provider} from "react-redux";
 import './App.scss';
 import Footer from "./compopnents/Footer";
+import store from "./store";
 
 function App() {
   return (
-    <div className="App">
-      <Footer/>
-    </div>
+    <Provider store={store}>
+      <div className="App">
+        <Footer/>
+      </div>
+    </Provider>
   );
 }
 
