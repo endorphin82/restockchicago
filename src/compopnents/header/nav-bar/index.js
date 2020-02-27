@@ -1,7 +1,4 @@
 import React from 'react';
-import jordan from '../img/jumpman.svg';
-import nike from '../img/nike_sport.svg';
-import adidas from '../img/adidas.svg';
 import search from '../img/ei-search.svg';
 
 import './styles.scss'
@@ -10,9 +7,9 @@ const NavBar = () => {
   return (
     <div className="header__navbar navbar">
       <ul className="navbar__menu-list">
-        <li><a href="#"><img src={jordan} alt="jordan"/></a></li>
-        <li><a href="#"><img src={nike} alt="nike"/></a></li>
-        <li><a href="#"><img src={adidas} alt="adidas"/></a></li>
+        <li className="navbar__jordan"><a href="#"/></li>
+        <li className="navbar__nike"><a href="#"/></li>
+        <li className="navbar__adidas"><a href="#"/></li>
         <li><a href="#">supreme</a></li>
         <li><a href="#">apparel</a></li>
         <li><a href="#">accessories</a></li>
