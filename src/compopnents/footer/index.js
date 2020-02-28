@@ -39,7 +39,7 @@ const Footer = () => {
             <input type="text" name="email" title="Sign up for our Newsletter" placeholder="Enter your email"  autoCapitalize="off" autoCorrect="off" spellCheck="false" />
           </div>
           <a href="#" className="subscribe__submit">
-            <img src={arrow_right} alt=""/>
+            <img src={arrow_right} title="Sign up for our Newsletter" alt=""/>
           </a>
         </form>
       </div>
