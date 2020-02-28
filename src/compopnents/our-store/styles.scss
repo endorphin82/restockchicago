@@ -1,0 +1,23 @@
+.our-store {
+  // .our-store__title
+  &__title {}
+  // .our-store__contacts
+  &__contacts {}
+  // .our-store__empty
+  &__empty {}
+}
+.contacts {
+  // .contacts__our-store
+  &__our-store {
+    // .contacts__our-store_title-address
+    &_title-address {}
+    // .contacts__our-store_address
+    &_address {}
+    // .contacts__our-store_tel
+    &_tel {}
+    // .contacts__our-store_operation-title
+    &_operation-title {}
+    // .contacts__our-store_operation
+    &_operation {}
+  }
+}
