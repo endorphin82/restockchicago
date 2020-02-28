@@ -11,7 +11,7 @@ const OurStore = () => {
         <span className="contacts__our-store_title-address">Woodfield Mall</span>
         <p className="contacts__our-store_address">5 Woodfield Mall G120,</p>
         <p className="contacts__our-store_address">Schaumburg, IL 60173</p>
-        <p className="contacts__our-store_tel"><a href="tel:(224) 520-8414">(224) 520-8414</a></p>
+        <p className="contacts__our-store_tel"><a href="tel:2245208414">(224) 520-8414</a></p>
         <p className="contacts__our-store_operation-title">Hours of Operation</p>
         <p className="contacts__our-store_operation">Monday - Saturday</p>
         <p className="contacts__our-store_operation">10AM - 9PM</p>

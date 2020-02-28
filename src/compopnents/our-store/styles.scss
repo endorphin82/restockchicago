@@ -1,23 +1,70 @@
 .our-store {
+  padding: 80px 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  color: #494949;
   // .our-store__title
-  &__title {}
+  &__title {
+    flex: 0 0 33%;
+    margin: 0 0 12px 80px;
+    font-size: 30px;
+  }
+
   // .our-store__contacts
-  &__contacts {}
+  &__contacts {
+    flex: 0 0 23%;
+  }
+
   // .our-store__empty
-  &__empty {}
+  &__empty {
+    flex: 1 0 auto;
+  }
 }
+
 .contacts {
   // .contacts__our-store
   &__our-store {
     // .contacts__our-store_title-address
-    &_title-address {}
+    &_title-address {
+      font-size: 20px;
+      line-height: 48px;
+      color: #b2bbc4;
+    }
+
     // .contacts__our-store_address
-    &_address {}
+    &_address {
+      font-size: 16px;
+      line-height: 24px;
+    }
+
     // .contacts__our-store_tel
-    &_tel {}
+    &_tel {
+      margin: 38px 0;
+
+      a {
+        font-size: 16px;
+        background-image: url(./img/phone-icon.png);
+        background-repeat: no-repeat;
+        color: #494949;
+        background-position: 0 center;
+        text-align: right;
+        padding: 0 0 0 30px;
+      }
+    }
+
     // .contacts__our-store_operation-title
-    &_operation-title {}
+    &_operation-title {
+      font-size: 16px;
+      font-weight: 700;
+      line-height: 24px;
+
+    }
+
     // .contacts__our-store_operation
-    &_operation {}
+    &_operation {
+      font-size: 16px;
+      line-height: 24px;
+    }
   }
 }

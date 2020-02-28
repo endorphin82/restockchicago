@@ -1,8 +1,79 @@
 .find-your-fit {
+  background-color: #F7F7F8;
+  padding: 80px 0;
+  margin: 40px 0 0 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  text-align: center;
+
   // .find-your-fit__title
-  &__title {}
+  &__title {
+    flex: 1 1 33.333%;
+    text-align: center;
+
+    span {
+      color: #494949;
+      font-size: 46px;
+    }
+  }
+
+
+  img {
+    display: block;
+    width: 100%;
+    max-width: 339px;
+    margin: 0 auto 70px auto;
+  }
+
+  a {
+    background-repeat: no-repeat;
+    text-align: right;
+    max-width: 100%;
+    width: auto;
+    overflow: hidden;
+    border: 1px solid #494949;
+    color: #494949;
+    height: 48px;
+    display: inline-block;
+    line-height: 46px;
+    font-size: 16px;
+
+    &:hover {
+      color: #ffffff;
+      background-color: #494949;
+    }
+  }
+
   // .find-your-fit__shop-men
-  &__shop-men {}
+  &__shop-men {
+    flex: 1 1 33.333%;
+
+    a {
+      background-image: url(./img/arrow_left_black.png);
+      background-position: 20px center;
+      text-align: right;
+      padding: 0 24px 0 54px;
+
+      &:hover {
+        background-image: url(./img/arrow_left_white.png);
+      }
+    }
+  }
+
   // .find-your-fit__shop-kids
-  &__shop-kids {}
+  &__shop-kids {
+    flex: 1 1 33.333%;
+
+    a {
+      background-image: url(./img/arrow_right_black.png);
+      background-position: right 20px center;
+      text-align: right;
+      padding: 0 54px 0 24px;
+
+      &:hover {
+        background-image: url(./img/arrow_right_white.png);
+      }
+    }
+  }
 }
