@@ -1,27 +1,27 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "809922f22f172f90c08186409a15793a",
+    "revision": "11b23a7461499f014fc4e3a33b4d7ff4",
     "url": "./index.html"
   },
   {
-    "revision": "6bdc94c9be9e9f1baf54",
+    "revision": "a83d6514eb9441f62822",
     "url": "./static/css/2.cd67af34.chunk.css"
   },
   {
-    "revision": "f465459ebb11ba45fe59",
-    "url": "./static/css/main.98b679de.chunk.css"
+    "revision": "9aa6cd136bf1c0d2fd17",
+    "url": "./static/css/main.44ffea73.chunk.css"
   },
   {
-    "revision": "6bdc94c9be9e9f1baf54",
-    "url": "./static/js/2.7f0d4e51.chunk.js"
+    "revision": "a83d6514eb9441f62822",
+    "url": "./static/js/2.eac6ac89.chunk.js"
   },
   {
     "revision": "928d7b5eb39d16fe9a880722c974b51e",
-    "url": "./static/js/2.7f0d4e51.chunk.js.LICENSE.txt"
+    "url": "./static/js/2.eac6ac89.chunk.js.LICENSE.txt"
   },
   {
-    "revision": "f465459ebb11ba45fe59",
-    "url": "./static/js/main.a664b732.chunk.js"
+    "revision": "9aa6cd136bf1c0d2fd17",
+    "url": "./static/js/main.9933e8ae.chunk.js"
   },
   {
     "revision": "49c491ab7e435dcb9f29",
@@ -34,6 +34,10 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
     "revision": "df6b52bf5ec6fdd5c34099a93c75afd2",
     "url": "./static/media/adidas_hover.df6b52bf.svg"
+  },
+  {
+    "revision": "045dd9d501335149a5b8bd5c32b085bb",
+    "url": "./static/media/close.045dd9d5.svg"
   },
   {
     "revision": "5203e9f8a726ac6d99a9fa8232960b99",
