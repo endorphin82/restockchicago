@@ -1,3 +1,4 @@
+
 .header {
 
   // .header__navbar
@@ -21,7 +22,8 @@
     justify-content: space-between;
     display: flex;
     align-items: center;
-
+    position: relative;
+    margin-right: 100px;
     li {
       display: inline-block;
     }
@@ -48,10 +50,30 @@
 
   // .navbar__menu-search
   &__menu-search {
-    margin-left: 55px;
+    input[type=text] {
+      position: absolute;
+      top: 55px;
+      right: 40px;
+      color: white;
+      box-sizing: border-box;
+      background-image: url('../img/ei-search.svg');
+      background-position: 100% 50%;
+      background-repeat: no-repeat;
+      width: 40px;
+      height: 40px;
+      transition: width 0.4s ease-in-out;
+      cursor: pointer;
+    }
 
-    img {
-      height: 25px;
+    input[type=text]:focus {
+      width: 30%;
+      background-image: url('../img/close.svg');
+      background-position: 10px 50%;
+      background-color: #494949;
+      color: white;
+      border: 2px solid #ccc;
+      padding-left: 50px;
+      cursor: text;
     }
   }
 
@@ -66,6 +88,7 @@
       cursor: pointer;
       background-position: center;
       transition: all 0.1s ease 0.1s;
+
       &:hover {
         background-image: url("../img/jumpman_hover.svg");
       }
@@ -83,6 +106,7 @@
       cursor: pointer;
       background-position: center;
       transition: all 0.1s ease 0.1s;
+
       &:hover {
         background-image: url("../img/nike_sport_hover.svg");
       }
