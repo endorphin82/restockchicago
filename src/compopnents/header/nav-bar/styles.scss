@@ -23,7 +23,7 @@
     display: flex;
     align-items: center;
     position: relative;
-    margin-right: 100px;
+    margin-right: 5%;
     li {
       display: inline-block;
     }
@@ -53,7 +53,7 @@
     input[type=text] {
       position: absolute;
       top: 55px;
-      right: 40px;
+      right: 2%;
       color: white;
       box-sizing: border-box;
       background-image: url('../img/ei-search.svg');
