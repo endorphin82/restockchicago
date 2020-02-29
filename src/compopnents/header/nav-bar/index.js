@@ -18,7 +18,10 @@ const NavBar = () => {
         <li><a href="#">shop all</a></li>
       </ul>
       <div className="navbar__menu-search">
-        <a href="#"><img src={search} alt=""/></a>
+        <form>
+          <input type="text" name="search" autoComplete="off"/>
+        </form>
+
       </div>
     </div>
   );
