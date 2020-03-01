@@ -1,0 +1,20 @@
+.menu-item {
+  // .menu-item__accessories
+  &__accessories {}
+}
+.accessories-menu {
+  // .accessories-menu__left
+  &__left {
+    // .accessories-menu__left_title
+    &_title {}
+    // .accessories-menu__left_link
+    &_link {}
+  }
+  // .accessories-menu__right
+  &__right {
+    // .accessories-menu__right_list-1
+    &_list-1 {}
+    // .accessories-menu__right_list-2
+    &_list-2 {}
+  }
+}

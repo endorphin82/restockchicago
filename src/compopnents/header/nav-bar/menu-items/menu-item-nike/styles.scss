@@ -1,0 +1,22 @@
+.menu-item {
+  // .menu-item__jordan
+  &__jordan {}
+}
+.jordan-menu {
+  // .jordan-menu__left
+  &__left {
+    // .jordan-menu__left_title
+    &_title {}
+    // .jordan-menu__left_link
+    &_link {}
+  }
+  // .jordan-menu__right
+  &__right {
+    // .jordan-menu__right_list-1
+    &_list-1 {}
+    // .jordan-menu__right_list-2
+    &_list-2 {}
+    // .jordan-menu__right_list-3
+    &_list-3 {}
+  }
+}
