@@ -1,1 +1,55 @@
 //background: url("https://www.restockchicago.com/media/wysiwyg/Megamenu/shop-adidas.png") no-repeat right center
+
+.menu-item {
+  // .menu-item__jordan
+  &__jordan {
+    //display: none;
+    position: relative;
+    top: 100px;
+    height: 415px;
+    width: 100%;
+    border: 1px solid #851515;
+    //padding-top: 150px;
+  }
+}
+
+.jordan-menu {
+  display: flex;
+  //justify-content: center;
+  //align-items: center;
+
+  // .jordan-menu__left
+  &__left {
+    flex: 1 1 33.333%;
+    align-self: center;
+    background: url("img/shop-jordan.png") no-repeat right center;
+    margin-left: 3%;
+    // .jordan-menu__left_title
+    &_title {
+      font-size: 46px;
+      color: #494949;
+      line-height: 56px;
+      margin-bottom: 10px;
+    }
+
+    // .jordan-menu__left_link
+    &_link {
+    }
+  }
+
+  // .jordan-menu__right
+  &__right {
+    flex: 1 1 66.666%;
+    // .jordan-menu__right_list-1
+    &_list-1 {
+    }
+
+    // .jordan-menu__right_list-2
+    &_list-2 {
+    }
+
+    // .jordan-menu__right_list-3
+    &_list-3 {
+    }
+  }
+}
