@@ -4,7 +4,6 @@ import ShopAllButtonWithUrl from "../shop-all-button-with-url";
 import './styles.scss'
 
 const MenuItemApparel = ({itemName}) => {
-  console.log(itemName);
   let classes = itemName === 'apparel' ? "menu-item__apparel apparel-menu menu-item menu-item__active" : "menu-item__apparel apparel-menu menu-item"
 
   return (
