@@ -1,18 +1,46 @@
 import React from 'react';
-import search from '../img/ei-search.svg';
+import {connect} from "react-redux";
+import {ActiveMenuItem} from "../../../AC";
+import MenuItemJordan from "./menu-items/menu-item-jordan";
+import MenuItemNike from "./menu-items/menu-item-nike";
+import MenuItemAdidas from "./menu-items/menu-item-adidas";
+import MenuItemSupreme from "./menu-items/menu-item-supreme";
+import MenuItemApparel from "./menu-items/menu-item-apparel";
+import MenuItemAccessories from "./menu-items/menu-item-accessories";
 
 import './styles.scss'
 
-const NavBar = () => {
+const NavBar = ({ActiveMenuItem, itemName}) => {
+  const handleClick = (item) => {
+    ActiveMenuItem(item)
+  };
   return (
     <div className="header__navbar navbar">
       <ul className="navbar__menu-list">
-        <li className="navbar__jordan"><a href="#"/></li>
-        <li className="navbar__nike"><a href="#"/></li>
-        <li className="navbar__adidas"><a href="#"/></li>
-        <li><a href="#">supreme</a></li>
-        <li><a href="#">apparel</a></li>
-        <li><a href="#">accessories</a></li>
+        <li className={itemName === 'jordan' ? "active navbar__jordan" : "navbar__jordan"}>
+          <a href="#" onClick={handleClick.bind(null, "jordan")}/>
+          <MenuItemJordan/>
+        </li>
+        <li className={itemName === 'nike' ? "active navbar__nike" : "navbar__nike"}>
+          <a href="#" onClick={handleClick.bind(null, "nike")}/>
+          <MenuItemNike/>
+        </li>
+        <li className={itemName === 'adidas' ? "active navbar__adidas" : "navbar__adidas"}>
+          <a href="#" onClick={handleClick.bind(null, "adidas")}/>
+          <MenuItemAdidas/>
+        </li>
+        <li className={itemName === "supreme" ? "active" : ""}>
+          <a href="#" onClick={handleClick.bind(null, "supreme")}>supreme</a>
+          <MenuItemSupreme/>
+        </li>
+        <li className={itemName === "apparel" ? "active" : ""}>
+          <a href="#" onClick={handleClick.bind(null, "apparel")}>apparel</a>
+          <MenuItemApparel/>
+        </li>
+        <li className={itemName === "accessories" ? "active" : ""}>
+          <a href="#" onClick={handleClick.bind(null, "accessories")}>accessories</a>
+          <MenuItemAccessories/>
+        </li>
         <li><a href="#">new arrivals</a></li>
         <li><a href="#">gift cards</a></li>
         <li><a href="#">shop all</a></li>
@@ -21,10 +49,13 @@ const NavBar = () => {
         <form>
           <input type="text" name="search" autoComplete="off"/>
         </form>
-
       </div>
     </div>
   );
 };
 
-export default NavBar;
+export default connect(state => ({
+    itemName: state.active_menu_item.Item
+  }),
+  {ActiveMenuItem}
+)(NavBar);

@@ -1,15 +1,18 @@
 import React from 'react';
-import ShopAllButtonWithUrl from "../shop-all-button-with-url";
+import {connect} from "react-redux";
 import yeezy from './img/yeezy.png'
 import boost from './img/boost.png'
 import nmd from './img/nmd.png'
 import superstar from './img/superstar.png'
+import ShopAllButtonWithUrl from "../shop-all-button-with-url";
 
 import './styles.scss'
 
-const MenuItemAdidas = () => {
+const MenuItemAdidas = ({itemName}) => {
+  let classes = itemName === 'adidas' ? "menu-item__adidas adidas-menu menu-item menu-item__active" : "menu-item__adidas adidas-menu menu-item"
+
   return (
-    <div className="menu-item__adidas adidas-menu">
+    <div className={classes}>
       <div className="adidas-menu__left">
         <p className="adidas-menu__left_title">
           Shop Adidas
@@ -36,4 +39,7 @@ const MenuItemAdidas = () => {
   );
 };
 
-export default MenuItemAdidas;
+export default connect(state =>({
+    itemName: state.active_menu_item.Item
+  })
+)(MenuItemAdidas);

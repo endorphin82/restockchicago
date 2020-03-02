@@ -1,22 +1,54 @@
 .menu-item {
-  // .menu-item__jordan
-  &__jordan {}
+  // .menu-item__nike
+  &__nike {}
 }
-.jordan-menu {
-  // .jordan-menu__left
+.nike-menu {
+  display: flex;
+  position: fixed;
+  // .nike-menu__left
   &__left {
-    // .jordan-menu__left_title
-    &_title {}
-    // .jordan-menu__left_link
+    flex: 1 1 33.333%;
+    background: url("img/shop-nike.png") no-repeat right center;
+    margin-left: 3%;
+    // .nike-menu__left_title
+    &_title {
+      padding-top: 30%;
+      font-size: 46px;
+      color: #494949;
+      line-height: 56px;
+      margin-bottom: 10px;
+    }
+    // .nike-menu__left_link
     &_link {}
   }
-  // .jordan-menu__right
+  // .nike-menu__right
   &__right {
-    // .jordan-menu__right_list-1
-    &_list-1 {}
-    // .jordan-menu__right_list-2
-    &_list-2 {}
-    // .jordan-menu__right_list-3
-    &_list-3 {}
+    background-color: #ffffff;
+    flex: 1 1 66.666%;
+    display: flex;
+    font-size: 16px;
+    line-height: 47px;
+    padding: 2% 1% 1% 10%;
+    text-transform: uppercase;
+
+    a {
+      color: #494949;
+
+      &:hover {
+        text-decoration: underline;
+      }
+    }
+
+    // .nike-menu__right_list-1
+    &_list-1 {
+    }
+
+    // .nike-menu__right_list-2
+    &_list-2 {
+    }
+
+    // .nike-menu__right_list-3
+    &_list-3 {
+    }
   }
 }

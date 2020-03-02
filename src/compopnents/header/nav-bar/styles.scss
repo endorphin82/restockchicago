@@ -1,11 +1,22 @@
 
+.menu-item {
+  position: fixed;
+  z-index: 3;
+  top: 95px;
+  left: 0;
+  height: 415px;
+  width: 100%;
+  visibility: hidden;
+  box-shadow: 0px -4px 4px -2px rgba(0, 0, 0, 0.07);
+  background-color: #F7F7F8;
+}
+
 .header {
 
   // .header__navbar
   &__navbar {
     //margin-top: 3px;
     padding: 10px 35px 10px 35px;
-    //height: 48px;
     background-color: #fdfdfd;
     box-shadow: 0 6px 4px -2px rgba(0, 0, 0, 0.07);
   }
@@ -13,22 +24,21 @@
 
 .navbar {
   display: flex;
-  //justify-content:flex-start;
   justify-content: space-between;
   flex-wrap: nowrap;
   // .navbar__menu-list
   &__menu-list {
+
     flex: 1 1 auto;
     justify-content: space-between;
     display: flex;
     align-items: center;
     position: relative;
+    &>li {
     margin-right: 5%;
-    li {
-      display: inline-block;
     }
 
-    a {
+    &>li>a {
       color: #b2bbc4;
       transition: all 0.1s ease 0.1s;
       text-transform: uppercase;
@@ -39,13 +49,17 @@
       }
     }
 
-    img {
-      height: 25px;
+   .active>a{
+      text-decoration: underline;
+      color: #494949;
+   }
 
-      &:hover {
-        //color: black;
-      }
+    &>img {
+      height: 25px;
     }
+
+
+
   }
 
   // .navbar__menu-search
@@ -77,8 +91,9 @@
     }
   }
 
+  // .navbar__jordan
   &__jordan {
-    a {
+    &>a {
       background-repeat: no-repeat;
       display: inline-block;
       width: 26px;
@@ -93,10 +108,14 @@
         background-image: url("../img/jumpman_hover.svg");
       }
     }
+
+    &.active>a {
+      background-image: url("../img/jumpman_hover.svg");
+    }
   }
 
   &__nike {
-    a {
+    &>a {
       background-repeat: no-repeat;
       display: inline-block;
       width: 68px;
@@ -111,10 +130,14 @@
         background-image: url("../img/nike_sport_hover.svg");
       }
     }
+
+    &.active>a {
+      background-image: url("../img/nike_sport_hover.svg");
+    }
   }
 
   &__adidas {
-    a {
+    &>a {
       background-repeat: no-repeat;
       display: inline-block;
       width: 40px;
@@ -128,6 +151,9 @@
       &:hover {
         background-image: url("../img/adidas_hover.svg");
       }
+    }
+    &.active>a {
+      background-image: url("../img/adidas_hover.svg");
     }
   }
 }
