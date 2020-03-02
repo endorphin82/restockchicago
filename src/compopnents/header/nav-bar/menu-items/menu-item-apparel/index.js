@@ -4,7 +4,7 @@ import './styles.scss'
 
 const MenuItemApparel = () => {
   return (
-    <div className="menu-item__apparel apparel-menu">
+    <div className="menu-item__apparel apparel-menu menu-item">
       <div className="apparel-menu__left">
         <p className="apparel-menu__left_title">
           Shop Apparel

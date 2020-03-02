@@ -8,16 +8,12 @@ import FindYourFit from "./compopnents/find-your-fit";
 import OurStore from "./compopnents/our-store";
 
 import store from "./store";
-import MenuItemJordan from "./compopnents/header/nav-bar/menu-items/menu-item-jordan";
 
 function App() {
   return (
     <Provider store={store}>
       <div className="App">
         <Header/>
-
-        <MenuItemJordan/>
-
         <Slider/>
         <FindYourFit/>
         <OurStore/>

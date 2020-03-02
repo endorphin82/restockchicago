@@ -4,7 +4,7 @@ import ShopAllButtonWithUrl from "../shop-all-button-with-url";
 
 const MenuItemAccessories = () => {
   return (
-    <div className="menu-item__accessories accessories-menu">
+    <div className="menu-item__accessories accessories-menu menu-item">
       <div className="accessories-menu__left">
         <p className="accessories-menu__left_title">
           Shop Accessories

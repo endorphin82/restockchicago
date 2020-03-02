@@ -5,7 +5,7 @@ import './styles.scss'
 
 const MenuItemNike = () => {
   return (
-    <div className="menu-item__nike nike-menu">
+    <div className="menu-item__nike nike-menu menu-item">
       <div className="nike-menu__left">
         <p className="nike-menu__left_title">
           Shop Nike

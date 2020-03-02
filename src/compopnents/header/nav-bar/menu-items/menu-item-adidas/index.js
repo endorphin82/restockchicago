@@ -9,7 +9,7 @@ import './styles.scss'
 
 const MenuItemAdidas = () => {
   return (
-    <div className="menu-item__adidas adidas-menu">
+    <div className="menu-item__adidas adidas-menu menu-item">
       <div className="adidas-menu__left">
         <p className="adidas-menu__left_title">
           Shop Adidas

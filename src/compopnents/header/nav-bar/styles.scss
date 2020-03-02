@@ -1,4 +1,14 @@
 
+.menu-item {
+  //display: none;
+  position: fixed;
+  z-index: 3;
+  top: 95px;
+  height: 415px;
+  width: 100%;
+  background-color: white;
+}
+
 .header {
 
   // .header__navbar

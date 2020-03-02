@@ -4,7 +4,7 @@ import './styles.scss'
 
 const MenuItemJordan = () => {
   return (
-    <div className="menu-item__jordan jordan-menu">
+    <div className="menu-item__jordan jordan-menu menu-item">
       <div className="jordan-menu__left">
         <p className="jordan-menu__left_title">
           Shop Jordan

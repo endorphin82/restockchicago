@@ -5,7 +5,7 @@ import ShopAllButtonWithUrl from "../shop-all-button-with-url";
 
 const MenuItemSupreme = () => {
   return (
-    <div className="menu-item__supreme supreme-menu">
+    <div className="menu-item__supreme supreme-menu menu-item">
       <div className="supreme-menu__left">
         <p className="supreme-menu__left_title">
           Shop SUPREME
