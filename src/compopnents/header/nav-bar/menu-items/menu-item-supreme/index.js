@@ -1,11 +1,14 @@
 import React from 'react';
-
-import './styles.scss'
+import {connect} from "react-redux";
 import ShopAllButtonWithUrl from "../shop-all-button-with-url";
 
-const MenuItemSupreme = () => {
+import './styles.scss'
+
+const MenuItemSupreme = ({itemName}) => {
+  let classes = itemName === 'supreme' ? "menu-item__supreme supreme-menu menu-item menu-item__active" : "menu-item__supreme supreme-menu menu-item"
+
   return (
-    <div className="menu-item__supreme supreme-menu menu-item">
+    <div className={classes}>
       <div className="supreme-menu__left">
         <p className="supreme-menu__left_title">
           Shop SUPREME
@@ -31,4 +34,7 @@ const MenuItemSupreme = () => {
   );
 };
 
-export default MenuItemSupreme;
+export default connect(state =>({
+    itemName: state.active_menu_item.Item
+  })
+)(MenuItemSupreme);

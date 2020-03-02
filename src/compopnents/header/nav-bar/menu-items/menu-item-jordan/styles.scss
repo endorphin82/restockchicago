@@ -1,17 +1,16 @@
-//background: url("https://www.restockchicago.com/media/wysiwyg/Megamenu/shop-adidas.png") no-repeat right center
-
 .menu-item {
   // .menu-item__jordan
   &__jordan {
-
-    //padding-top: 150px;
+  }
+  &__active{
+    visibility: visible !important;
   }
 }
 
 .jordan-menu {
   display: flex;
   position: fixed;
-  background-color: #F7F7F8;
+  background-color: #F7F7F8 !important;;
 
   // .jordan-menu__left
   &__left {

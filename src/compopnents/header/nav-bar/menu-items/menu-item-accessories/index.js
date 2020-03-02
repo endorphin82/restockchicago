@@ -1,10 +1,12 @@
 import React from 'react';
 import './styles.scss'
 import ShopAllButtonWithUrl from "../shop-all-button-with-url";
+import {connect} from "react-redux";
 
-const MenuItemAccessories = () => {
+const MenuItemAccessories = ({itemName}) => {
+  let classes = itemName === 'accessories' ? "menu-item__accessories accessories-menu menu-item menu-item__active" : "menu-item__accessories accessories-menu menu-item"
   return (
-    <div className="menu-item__accessories accessories-menu menu-item">
+    <div className={classes}>
       <div className="accessories-menu__left">
         <p className="accessories-menu__left_title">
           Shop Accessories
@@ -33,4 +35,7 @@ const MenuItemAccessories = () => {
   );
 };
 
-export default MenuItemAccessories;
+export default connect(state =>({
+    itemName: state.active_menu_item.Item
+  })
+)(MenuItemAccessories);

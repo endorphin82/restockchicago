@@ -1,10 +1,12 @@
 import React from 'react';
 import ShopAllButtonWithUrl from "../shop-all-button-with-url";
+import {connect} from "react-redux";
 import './styles.scss'
 
-const MenuItemJordan = () => {
+const MenuItemJordan = ({itemName}) => {
+  let classes =  itemName === 'jordan' ?  "menu-item__jordan jordan-menu menu-item menu-item__active" : "menu-item__jordan jordan-menu menu-item"
   return (
-    <div className="menu-item__jordan jordan-menu menu-item">
+    <div className={classes}>
       <div className="jordan-menu__left">
         <p className="jordan-menu__left_title">
           Shop Jordan
@@ -41,4 +43,7 @@ const MenuItemJordan = () => {
   );
 };
 
-export default MenuItemJordan;
+export default connect((state) =>({
+  itemName: state.active_menu_item.Item
+})
+)(MenuItemJordan);
