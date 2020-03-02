@@ -1,20 +1,20 @@
 {
   "files": {
-    "main.css": "./static/css/main.003cc1e0.chunk.css",
-    "main.js": "./static/js/main.9ac94993.chunk.js",
-    "main.js.map": "./static/js/main.9ac94993.chunk.js.map",
+    "main.css": "./static/css/main.e4ade628.chunk.css",
+    "main.js": "./static/js/main.5e7d6d1a.chunk.js",
+    "main.js.map": "./static/js/main.5e7d6d1a.chunk.js.map",
     "runtime-main.js": "./static/js/runtime-main.4c9707ea.js",
     "runtime-main.js.map": "./static/js/runtime-main.4c9707ea.js.map",
     "static/css/2.cd67af34.chunk.css": "./static/css/2.cd67af34.chunk.css",
-    "static/js/2.bf480d3e.chunk.js": "./static/js/2.bf480d3e.chunk.js",
-    "static/js/2.bf480d3e.chunk.js.map": "./static/js/2.bf480d3e.chunk.js.map",
+    "static/js/2.c6bd343f.chunk.js": "./static/js/2.c6bd343f.chunk.js",
+    "static/js/2.c6bd343f.chunk.js.map": "./static/js/2.c6bd343f.chunk.js.map",
     "index.html": "./index.html",
-    "precache-manifest.d2c9daf6f897f3a201781f1db18be80c.js": "./precache-manifest.d2c9daf6f897f3a201781f1db18be80c.js",
+    "precache-manifest.eeff347f68a2b188a7d8c17a83af89cc.js": "./precache-manifest.eeff347f68a2b188a7d8c17a83af89cc.js",
     "service-worker.js": "./service-worker.js",
     "static/css/2.cd67af34.chunk.css.map": "./static/css/2.cd67af34.chunk.css.map",
-    "static/css/main.003cc1e0.chunk.css.map": "./static/css/main.003cc1e0.chunk.css.map",
-    "static/js/2.bf480d3e.chunk.js.LICENSE.txt": "./static/js/2.bf480d3e.chunk.js.LICENSE.txt",
-    "static/media/styles.scss": "./static/media/r-background.0ce12a17.svg",
+    "static/css/main.e4ade628.chunk.css.map": "./static/css/main.e4ade628.chunk.css.map",
+    "static/js/2.c6bd343f.chunk.js.LICENSE.txt": "./static/js/2.c6bd343f.chunk.js.LICENSE.txt",
+    "static/media/styles.scss": "./static/media/shop-nike.690c5ea7.png",
     "static/media/footer.svg": "./static/media/footer.c45fc687.svg",
     "static/media/header.svg": "./static/media/header.f4c1dddb.svg",
     "static/media/shop_kids2.png": "./static/media/shop_kids2.1eb43e27.png",
@@ -26,8 +26,8 @@
   "entrypoints": [
     "static/js/runtime-main.4c9707ea.js",
     "static/css/2.cd67af34.chunk.css",
-    "static/js/2.bf480d3e.chunk.js",
-    "static/css/main.003cc1e0.chunk.css",
-    "static/js/main.9ac94993.chunk.js"
+    "static/js/2.c6bd343f.chunk.js",
+    "static/css/main.e4ade628.chunk.css",
+    "static/js/main.5e7d6d1a.chunk.js"
   ]
 }

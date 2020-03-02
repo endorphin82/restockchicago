@@ -1,27 +1,27 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "2244209361445d184a727579f529dad1",
+    "revision": "a6285ee7f4c0d8e89427ee0e08dc2070",
     "url": "./index.html"
   },
   {
-    "revision": "4a2fc417c9d83f129bde",
+    "revision": "de12ebf6ec56678c2b87",
     "url": "./static/css/2.cd67af34.chunk.css"
   },
   {
-    "revision": "5b3e8e4238d554e0e326",
-    "url": "./static/css/main.003cc1e0.chunk.css"
+    "revision": "2d132d1a4c8798253787",
+    "url": "./static/css/main.e4ade628.chunk.css"
   },
   {
-    "revision": "4a2fc417c9d83f129bde",
-    "url": "./static/js/2.bf480d3e.chunk.js"
+    "revision": "de12ebf6ec56678c2b87",
+    "url": "./static/js/2.c6bd343f.chunk.js"
   },
   {
     "revision": "928d7b5eb39d16fe9a880722c974b51e",
-    "url": "./static/js/2.bf480d3e.chunk.js.LICENSE.txt"
+    "url": "./static/js/2.c6bd343f.chunk.js.LICENSE.txt"
   },
   {
-    "revision": "5b3e8e4238d554e0e326",
-    "url": "./static/js/main.9ac94993.chunk.js"
+    "revision": "2d132d1a4c8798253787",
+    "url": "./static/js/main.5e7d6d1a.chunk.js"
   },
   {
     "revision": "49c491ab7e435dcb9f29",
@@ -78,6 +78,26 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
     "revision": "0ce12a17e3b4d32b0892ddeeffb2f919",
     "url": "./static/media/r-background.0ce12a17.svg"
+  },
+  {
+    "revision": "221ed6a6638ebd6a32b4c6ee8a393eb9",
+    "url": "./static/media/shop-accessories.221ed6a6.png"
+  },
+  {
+    "revision": "8b318da7c9ea3dc02120c24ec4943d8d",
+    "url": "./static/media/shop-adidas.8b318da7.png"
+  },
+  {
+    "revision": "8de578a35333da30ef3f47df97afda7f",
+    "url": "./static/media/shop-apparel.8de578a3.png"
+  },
+  {
+    "revision": "1bc5bf2793a1c850c8d63ca668f4cdc1",
+    "url": "./static/media/shop-jordan.1bc5bf27.png"
+  },
+  {
+    "revision": "690c5ea7df99b5ec09e23defc7f2f573",
+    "url": "./static/media/shop-nike.690c5ea7.png"
   },
   {
     "revision": "1eb43e27e9bf5d78abb2453c71768c27",
