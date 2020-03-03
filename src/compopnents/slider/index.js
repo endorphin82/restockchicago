@@ -16,17 +16,17 @@ const Slider = () => {
     <section className="slide">
       <AutoplaySlider
         organicArrows={false}
-        play={true}
+        play={false}
         cancelOnInteraction={false} // should stop playing on user interaction
         interval={6000}
       >
         <div className="slide__1">
           <div className="slide__1-text">
             <span>yeezy 350 v2</span>
+          </div>
             <a href="#" className="slide__1-button slide-button">
               <div>shop now</div>
             </a>
-          </div>
           <div className="slide__1-img">
             <img src={slide_1} alt=""/>
           </div>

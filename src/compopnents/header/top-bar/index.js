@@ -2,8 +2,8 @@ import React from 'react';
 import {connect} from "react-redux";
 import logo from '../img/header.svg'
 import logoMobile from '../img/header-small.svg'
-
 import {ToggleBurger} from "../../../AC";
+
 import './styles.scss'
 
 const TopBar = ({isOpenBurger, ToggleBurger, isMobile}) => {
