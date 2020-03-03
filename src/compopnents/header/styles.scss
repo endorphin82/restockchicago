@@ -4,4 +4,10 @@
   left: 0;
   width: 100%;
   z-index: 4;
+  @media (max-width: 770px) {
+    height: 115px;
+  }
+  @media (max-width: 580px) {
+    height: 70px;
+  }
 }
