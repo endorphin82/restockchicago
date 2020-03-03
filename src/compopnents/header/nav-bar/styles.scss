@@ -9,13 +9,13 @@
   visibility: hidden;
   box-shadow: 0px -4px 4px -2px rgba(0, 0, 0, 0.07);
   background-color: #F7F7F8;
+
 }
 
 .header {
 
   // .header__navbar
   &__navbar {
-    //margin-top: 3px;
     padding: 10px 35px 10px 35px;
     background-color: #fdfdfd;
     box-shadow: 0 6px 4px -2px rgba(0, 0, 0, 0.07);
@@ -26,44 +26,76 @@
   display: flex;
   justify-content: space-between;
   flex-wrap: nowrap;
+
+
   // .navbar__menu-list
   &__menu-list {
+    @media (max-width: 900px) {
+      font-size: 12px;
+      margin-right: 2%;
+    }
 
     flex: 1 1 auto;
     justify-content: space-between;
     display: flex;
     align-items: center;
     position: relative;
-    &>li {
-    margin-right: 5%;
+
+    @media (max-width: 770px) {
+      position: relative;
+      flex-direction: column;
+      overflow: auto;
     }
 
-    &>li>a {
+    & > li {
+      margin-right: 5%;
+
+      @media (max-width: 770px) {
+        margin: 5%;
+        position: relative;
+        overflow: auto;
+      }
+
+    }
+
+    & > li > a {
       color: #b2bbc4;
       transition: all 0.1s ease 0.1s;
       text-transform: uppercase;
-      tab-size: 16px;
 
       &:hover {
         color: #494949;
       }
     }
 
-   .active>a{
+    .active > a {
       text-decoration: underline;
       color: #494949;
-   }
-
-    &>img {
-      height: 25px;
     }
 
-
+    & > img {
+      height: 25px;
+    }
 
   }
 
   // .navbar__menu-search
   &__menu-search {
+
+    @media (max-width: 770px) {
+      position: absolute;
+      top: -20px;
+      right: 30%;
+      width: 100%;
+      & > input[type=text] {
+
+        background-color: #F7F7F8;
+      }
+    }
+    @media (max-width: 600px) {
+      right: 30%;
+    }
+  }
     input[type=text] {
       position: absolute;
       top: 55px;
@@ -77,83 +109,99 @@
       height: 40px;
       transition: width 0.4s ease-in-out;
       cursor: pointer;
+      @media (max-width: 770px) {
+        background-color: #F7F7F8;
+        background-image: url('../img/ei-search.svg');
+        background-position: 100% 50%;
+        background-repeat: no-repeat;
+      }
     }
 
     input[type=text]:focus {
-      width: 30%;
-      background-image: url('../img/close.svg');
-      background-position: 10px 50%;
-      background-color: #494949;
-      color: white;
-      border: 2px solid #ccc;
-      padding-left: 50px;
-      cursor: text;
+      @media (max-width: 770px) {
+        margin: 100px 0 0 0;
+        position: absolute;
+        top: 30px;
+        right: -30%;
+        width: 100%;
+        height: 50px;
+
+        //width: 30%;
+        background-image: url('../img/close.svg');
+        background-position: 10px 50%;
+        background-color: #494949;
+        color: white;
+        border: 2px solid #494949;
+        padding-left: 50px;
+        cursor: text;
+      }
+
     }
-  }
 
-  // .navbar__jordan
-  &__jordan {
-    &>a {
-      background-repeat: no-repeat;
-      display: inline-block;
-      width: 26px;
-      height: 25px;
-      background-image: url("../img/jumpman.svg");
-      background-size: 35px 24px;
-      cursor: pointer;
-      background-position: center;
-      transition: all 0.1s ease 0.1s;
+    // .navbar__jordan
+    &__jordan {
+      & > a {
+        background-repeat: no-repeat;
+        display: inline-block;
+        width: 26px;
+        height: 25px;
+        background-image: url("../img/jumpman.svg");
+        background-size: 35px 24px;
+        cursor: pointer;
+        background-position: center;
+        transition: all 0.1s ease 0.1s;
 
-      &:hover {
+        &:hover {
+          background-image: url("../img/jumpman_hover.svg");
+        }
+      }
+
+      &.active > a {
         background-image: url("../img/jumpman_hover.svg");
       }
     }
 
-    &.active>a {
-      background-image: url("../img/jumpman_hover.svg");
-    }
-  }
+    &__nike {
+      & > a {
+        background-repeat: no-repeat;
+        display: inline-block;
+        width: 68px;
+        height: 25px;
+        background-image: url("../img/nike_sport.svg");
+        background-size: 35px 24px;
+        cursor: pointer;
+        background-position: center;
+        transition: all 0.1s ease 0.1s;
 
-  &__nike {
-    &>a {
-      background-repeat: no-repeat;
-      display: inline-block;
-      width: 68px;
-      height: 25px;
-      background-image: url("../img/nike_sport.svg");
-      background-size: 35px 24px;
-      cursor: pointer;
-      background-position: center;
-      transition: all 0.1s ease 0.1s;
+        &:hover {
+          background-image: url("../img/nike_sport_hover.svg");
+        }
+      }
 
-      &:hover {
+      &.active > a {
         background-image: url("../img/nike_sport_hover.svg");
       }
     }
 
-    &.active>a {
-      background-image: url("../img/nike_sport_hover.svg");
-    }
-  }
+    &__adidas {
+      & > a {
+        background-repeat: no-repeat;
+        display: inline-block;
+        width: 40px;
+        height: 25px;
+        background-image: url("../img/adidas.svg");
+        background-size: 35px 24px;
+        cursor: pointer;
+        background-position: center;
+        transition: all 0.1s ease 0.1s;
 
-  &__adidas {
-    &>a {
-      background-repeat: no-repeat;
-      display: inline-block;
-      width: 40px;
-      height: 25px;
-      background-image: url("../img/adidas.svg");
-      background-size: 35px 24px;
-      cursor: pointer;
-      background-position: center;
-      transition: all 0.1s ease 0.1s;
+        &:hover {
+          background-image: url("../img/adidas_hover.svg");
+        }
+      }
 
-      &:hover {
+      &.active > a {
         background-image: url("../img/adidas_hover.svg");
       }
     }
-    &.active>a {
-      background-image: url("../img/adidas_hover.svg");
-    }
   }
-}

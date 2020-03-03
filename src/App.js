@@ -1,4 +1,4 @@
-import React from 'react';
+import React, {useEffect} from 'react';
 import {connect} from "react-redux";
 import {ToggleIsMobile} from "./AC";
 import Footer from "./compopnents/footer";
@@ -11,17 +11,26 @@ import './App.scss';
 
 function App({ToggleIsMobile}) {
 
+useEffect(() => {
+  if (window.outerWidth <= 770)
+    ToggleIsMobile(true); else {
+    ToggleIsMobile(false)
+  }
+
   let mql = window.matchMedia('(max-width: 770px)');
+
   function screenTest(e) {
     ToggleIsMobile(e.matches)
   }
 
   mql.addListener(screenTest);
+  return () => mql.removeListener(screenTest)
+}, []);
 
   return (
-    <div className="App">
+    <div>
       <Header/>
-      <Slider/>
+      <Slider />
       <FindYourFit/>
       <OurStore/>
       <Footer/>
