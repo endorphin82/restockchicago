@@ -9,6 +9,11 @@
   visibility: hidden;
   box-shadow: 0px -4px 4px -2px rgba(0, 0, 0, 0.07);
   background-color: #F7F7F8;
+  @media (max-width: 770px) {
+    display: flex;
+    position: absolute;
+    top: 30px;
+  }
 }
 
 .header {
@@ -32,6 +37,7 @@
     @media (max-width: 770px) {
       overflow: hidden;
       visibility: visible;
+      //position: relative;
     }
   }
 
