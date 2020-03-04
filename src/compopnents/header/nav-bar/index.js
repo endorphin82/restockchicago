@@ -13,7 +13,6 @@ import './styles.scss'
 const NavBar = ({ActiveMenuItem, itemName, isOpenBurger, isMobile}) => {
   console.log(((itemName === 'jordan') && !isMobile))
   const handleClick = (item) => {
-    if (isMobile && !isOpenBurger)  ActiveMenuItem(null);
     ActiveMenuItem(item)
   };
   return (
