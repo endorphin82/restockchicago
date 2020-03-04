@@ -16,7 +16,7 @@ const Slider = () => {
     <section className="slide">
       <AutoplaySlider
         organicArrows={false}
-        play={true}
+        play={false}
         cancelOnInteraction={false} // should stop playing on user interaction
         interval={6000}
       >
