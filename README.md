@@ -1,5 +1,6 @@
 #todo: 
 mobile menu
+
 adaptive slider
 
 # restockchicago
