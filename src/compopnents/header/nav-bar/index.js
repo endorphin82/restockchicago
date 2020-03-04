@@ -10,14 +10,16 @@ import MenuItemAccessories from "./menu-items/menu-item-accessories";
 
 import './styles.scss'
 
-const NavBar = ({ActiveMenuItem, itemName, isOpenBurger}) => {
+const NavBar = ({ActiveMenuItem, itemName, isOpenBurger, isMobile}) => {
+  console.log(((itemName === 'jordan') && !isMobile))
   const handleClick = (item) => {
+    if (isMobile && !isOpenBurger)  ActiveMenuItem(null);
     ActiveMenuItem(item)
   };
   return (
     <div className={isOpenBurger ?"header__navbar navbar active": "header__navbar navbar"}>
       <ul className="navbar__menu-list">
-        <li className={itemName === 'jordan' ? "active navbar__jordan" : "navbar__jordan"}>
+        <li className={itemName === 'jordan'? "active navbar__jordan" : "navbar__jordan"}>
           <a href="#" onClick={() => handleClick("jordan")}/>
           <MenuItemJordan/>
         </li>
@@ -55,8 +57,9 @@ const NavBar = ({ActiveMenuItem, itemName, isOpenBurger}) => {
 };
 
 export default connect(state => ({
+    isMobile: state.toggle_mobile.isMobile,
     isOpenBurger: state.burger.isOpen,
     itemName: state.active_menu_item.Item
   }),
-  {ActiveMenuItem}
+  {ActiveMenuItem},null, { pure: false }
 )(NavBar);
