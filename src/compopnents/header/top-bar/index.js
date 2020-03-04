@@ -2,13 +2,14 @@ import React from 'react';
 import {connect} from "react-redux";
 import logo from '../img/header.svg'
 import logoMobile from '../img/header-small.svg'
-import {ToggleBurger} from "../../../AC";
+import {ActiveMenuItem, ToggleBurger} from "../../../AC";
 
 import './styles.scss'
 
-const TopBar = ({isOpenBurger, ToggleBurger, isMobile}) => {
+const TopBar = ({isOpenBurger, ToggleBurger, isMobile, ActiveMenuItem}) => {
   const handleClick = () => {
-    ToggleBurger()
+    ToggleBurger();
+   ActiveMenuItem('null');
   };
   return (
     <div className="header__top-bar top-bar">
@@ -37,4 +38,4 @@ const TopBar = ({isOpenBurger, ToggleBurger, isMobile}) => {
 export default connect(state => ({
   isOpenBurger: state.burger.isOpen,
   isMobile: state.toggle_mobile.isMobile
-}),{ToggleBurger})(TopBar);
+}),{ToggleBurger, ActiveMenuItem})(TopBar);

@@ -4,7 +4,7 @@ import {connect} from "react-redux";
 import './styles.scss'
 
 const MenuItemJordan = ({itemName}) => {
-  let classes =  itemName === 'jordan' ?  "menu-item__jordan jordan-menu menu-item menu-item__active" : "menu-item__jordan jordan-menu menu-item"
+  let classes = itemName === 'jordan' ?  "menu-item__jordan jordan-menu menu-item menu-item__active" : "menu-item__jordan jordan-menu menu-item"
   return (
     <div className={classes}>
       <div className="jordan-menu__left">
@@ -45,5 +45,5 @@ const MenuItemJordan = ({itemName}) => {
 
 export default connect((state) =>({
   itemName: state.active_menu_item.Item
-})
+}), null, null, { pure: false }
 )(MenuItemJordan);
