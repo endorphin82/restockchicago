@@ -9,7 +9,7 @@ import './styles.scss'
 const TopBar = ({isOpenBurger, ToggleBurger, isMobile, ActiveMenuItem}) => {
   const handleClick = () => {
     ToggleBurger();
-   ActiveMenuItem('null');
+   ActiveMenuItem(null);
   };
   return (
     <div className="header__top-bar top-bar">
