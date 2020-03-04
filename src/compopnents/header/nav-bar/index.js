@@ -11,7 +11,6 @@ import MenuItemAccessories from "./menu-items/menu-item-accessories";
 import './styles.scss'
 
 const NavBar = ({ActiveMenuItem, itemName, isOpenBurger, isMobile}) => {
-  console.log(((itemName === 'jordan') && !isMobile))
   const handleClick = (item) => {
     ActiveMenuItem(item)
   };
