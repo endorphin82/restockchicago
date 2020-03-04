@@ -6,7 +6,9 @@
   justify-content: space-between;
   align-items: center;
   text-align: center;
-
+  @media (max-width: 770px) {
+    flex-direction: column;
+  }
   // .find-your-fit__title
   &__title {
     flex: 1 1 33.333%;
@@ -18,12 +20,14 @@
     }
   }
 
-
   img {
     display: block;
     width: 100%;
     max-width: 339px;
     margin: 0 auto 70px auto;
+    @media (max-width: 770px) {
+      margin: 70px;
+    }
   }
 
   a {
@@ -49,14 +53,24 @@
   &__shop-men {
     flex: 1 1 33.333%;
 
+
     a {
       background-image: url(./img/arrow_left_black.png);
       background-position: 20px center;
       text-align: right;
       padding: 0 24px 0 54px;
+      @media (max-width: 770px) {
+        width: 80%;
+        text-align: center;
+        padding: 0 24px;
+        background-image: none;
+      }
 
       &:hover {
         background-image: url(./img/arrow_left_white.png);
+        @media (max-width: 770px) {
+          background-image: none;
+        }
       }
     }
   }
@@ -70,9 +84,17 @@
       background-position: right 20px center;
       text-align: right;
       padding: 0 54px 0 24px;
-
+      @media (max-width: 770px) {
+        width: 80%;
+        text-align: center;
+        padding: 0 24px;
+        background-image: none;
+      }
       &:hover {
         background-image: url(./img/arrow_right_white.png);
+        @media (max-width: 770px) {
+          background-image: none;
+        }
       }
     }
   }

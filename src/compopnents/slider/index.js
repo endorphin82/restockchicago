@@ -1,12 +1,11 @@
 import React from 'react'
+import AwesomeSlider from 'react-awesome-slider';
+import withAutoplay from 'react-awesome-slider/dist/autoplay';
 import slide_1 from './img/slide-1.png'
 import slide_2 from './img/slide-2.png'
 import slide_3 from './img/slide-3.png'
 
-import AwesomeSlider from 'react-awesome-slider';
-import withAutoplay from 'react-awesome-slider/dist/autoplay';
 import 'react-awesome-slider/dist/styles.css';
-
 import './styles.scss'
 
 const AutoplaySlider = withAutoplay(AwesomeSlider);

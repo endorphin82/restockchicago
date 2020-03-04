@@ -36,6 +36,11 @@
 
   &__subscribe {
     min-width: 270px;
+    @media (max-width: 770px) {
+      align-self: center;
+      width: 100%;
+      order: 1;
+    }
   }
 
   &__social {
