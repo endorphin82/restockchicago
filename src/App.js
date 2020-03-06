@@ -12,6 +12,7 @@ import './App.scss';
 function App({ToggleIsMobile}) {
 
 useEffect(() => {
+  console.log("useEffect", window.outerWidth);
   if (window.outerWidth <= 770)
     ToggleIsMobile(true); else {
     ToggleIsMobile(false)
@@ -25,7 +26,7 @@ useEffect(() => {
 
   mql.addListener(screenTest);
   return () => mql.removeListener(screenTest)
-}, []);
+});
 
   return (
     <div>
@@ -38,4 +39,4 @@ useEffect(() => {
   );
 }
 
-export default connect(null, {ToggleIsMobile})(App);
+export default connect(null, {ToggleIsMobile},null, { pure: false })(App);

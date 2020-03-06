@@ -4,7 +4,7 @@
       align-self: center;
       display: block;
       position: relative;
-      width: 40px;
+      min-width: 40px;
       height: 40px;
 
       & span {
@@ -47,7 +47,7 @@
 
       &.active:after {
         transform: rotate(-45deg);
-        bottom: 19px;
+        bottom: 17px;
       }
     }
   }
