@@ -14,6 +14,7 @@ const Slider = () => {
   return (
     <section className="slide">
       <AutoplaySlider
+        fillParent={false}
         organicArrows={false}
         play={false}
         cancelOnInteraction={false} // should stop playing on user interaction
