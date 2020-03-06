@@ -2,15 +2,12 @@
   // .menu-item__jordan
   &__jordan {
   }
-  &__active{
-    visibility: visible !important;
-  }
 }
 
 .jordan-menu {
   display: flex;
   position: fixed;
-  background-color: #F7F7F8 !important;;
+  //background-color: #F7F7F8 !important;;
 
   // .jordan-menu__left
   &__left {
