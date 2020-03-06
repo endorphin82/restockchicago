@@ -2,9 +2,11 @@
   // .menu-item__nike
   &__nike {}
 }
+
 .nike-menu {
   display: flex;
   position: fixed;
+
   // .nike-menu__left
   &__left {
     flex: 1 1 33.333%;

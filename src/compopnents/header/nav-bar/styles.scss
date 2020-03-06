@@ -11,9 +11,14 @@
   background-color: #F7F7F8;
   transition: top 0.3s ease 0.3s;
 
-  @media (max-width: 770px) {
-    box-shadow: 0  6px 4px -2px rgba(0, 0, 0, 0.07);
+  &__active {
+    visibility: visible !important;
   }
+
+  @media (max-width: 770px) {
+    box-shadow: 0 6px 4px -2px rgba(0, 0, 0, 0.07);
+  }
+
   &__active {
     @media (max-width: 770px) {
       display: flex;
@@ -77,7 +82,8 @@
       margin-right: 5%;
 
       @media (max-width: 770px) {
-        margin: 5% 0;
+        margin: 5% auto;
+        width: 100%;
         //position: relative;
       }
     }
@@ -116,6 +122,7 @@
     @media (max-width: 770px) {
       visibility: visible;
     }
+
     @media (max-width: 770px) {
       position: absolute;
       top: -20px;
@@ -178,31 +185,37 @@
       top: 10px;
     }
   }
+ &__icon{
+   & > li {
+     @media (max-width: 770px) {
+     text-align: center;
+     width: 100%;
+     }
+   }
+   & > a {
 
+     background-repeat: no-repeat;
+     display: inline-block;
+     width: 40px;
+     height: 25px;
+     background-size: 35px 24px;
+     cursor: pointer;
+     background-position: center;
+     transition: all 0.1s ease 0.1s;
+     @media (max-width: 770px) {
+       text-align: center;
+       width: 100%;
+
+     }
+   }
+ }
   // .navbar__jordan
   &__jordan {
     & > a {
-      background-repeat: no-repeat;
-      display: inline-block;
-      width: 26px;
-      height: 25px;
       background-image: url("../img/jumpman.svg");
-      background-size: 35px 24px;
-      cursor: pointer;
-      background-position: center;
-      transition: all 0.1s ease 0.1s;
-
       &:hover {
         background-image: url("../img/jumpman_hover.svg");
       }
-
-      //
-      //&.active {
-      //  @media (max-width: 770px) {
-      //    background-position: center;
-      //  }
-      //}
-
 
     }
 
@@ -213,15 +226,7 @@
 
   &__nike {
     & > a {
-      background-repeat: no-repeat;
-      display: inline-block;
-      width: 68px;
-      height: 25px;
       background-image: url("../img/nike_sport.svg");
-      background-size: 35px 24px;
-      cursor: pointer;
-      background-position: center;
-      transition: all 0.1s ease 0.1s;
 
       &:hover {
         background-image: url("../img/nike_sport_hover.svg");
@@ -235,15 +240,7 @@
 
   &__adidas {
     & > a {
-      background-repeat: no-repeat;
-      display: inline-block;
-      width: 40px;
-      height: 25px;
       background-image: url("../img/adidas.svg");
-      background-size: 35px 24px;
-      cursor: pointer;
-      background-position: center;
-      transition: all 0.1s ease 0.1s;
 
       &:hover {
         background-image: url("../img/adidas_hover.svg");
