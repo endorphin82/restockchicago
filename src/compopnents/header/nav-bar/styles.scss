@@ -84,9 +84,9 @@
 
       @media (max-width: 770px) {
         width: 100%;
-        //position: relative;
-        margin: 5% auto;
+        margin: 0;
         & > a {
+          padding: 55px;
           display: block;
           width: 100%;
           text-align: center;
