@@ -9,6 +9,7 @@
   @media (max-width: 770px) {
     flex-direction: column;
   }
+
   // .find-your-fit__title
   &__title {
     flex: 1 1 33.333%;
@@ -52,7 +53,6 @@
   // .find-your-fit__shop-men
   &__shop-men {
     flex: 1 1 33.333%;
-
 
     a {
       background-image: url(./img/arrow_left_black.png);

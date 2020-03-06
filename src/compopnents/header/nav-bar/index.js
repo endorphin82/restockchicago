@@ -10,7 +10,7 @@ import MenuItemAccessories from "./menu-items/menu-item-accessories";
 
 import './styles.scss'
 
-const NavBar = ({ActiveMenuItem, itemName, isOpenBurger, isMobile}) => {
+const NavBar = ({ActiveMenuItem, itemName, isOpenBurger}) => {
   const handleClick = (item) => {
     ActiveMenuItem(item)
   };
@@ -55,9 +55,8 @@ const NavBar = ({ActiveMenuItem, itemName, isOpenBurger, isMobile}) => {
 };
 
 export default connect(state => ({
-    isMobile: state.toggle_mobile.isMobile,
     isOpenBurger: state.burger.isOpen,
     itemName: state.active_menu_item.Item
   }),
-  {ActiveMenuItem},null, { pure: false }
+  {ActiveMenuItem}
 )(NavBar);
