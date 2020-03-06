@@ -40,6 +40,7 @@
     background-color: #fdfdfd;
     box-shadow: 0 6px 4px -2px rgba(0, 0, 0, 0.07);
     @media (max-width: 770px) {
+      padding: 15px 0;
     }
   }
 }
@@ -82,9 +83,16 @@
       margin-right: 5%;
 
       @media (max-width: 770px) {
-        margin: 5% auto;
         width: 100%;
         //position: relative;
+        margin: 5% auto;
+        & > a {
+          display: block;
+          width: 100%;
+          text-align: center;
+          font-size: 22px;
+          border-bottom: solid 1px #b2bbc4;
+        }
       }
     }
 
@@ -185,34 +193,37 @@
       top: 10px;
     }
   }
- &__icon{
-   & > li {
-     @media (max-width: 770px) {
-     text-align: center;
-     width: 100%;
-     }
-   }
-   & > a {
 
-     background-repeat: no-repeat;
-     display: inline-block;
-     width: 40px;
-     height: 25px;
-     background-size: 35px 24px;
-     cursor: pointer;
-     background-position: center;
-     transition: all 0.1s ease 0.1s;
-     @media (max-width: 770px) {
-       text-align: center;
-       width: 100%;
+  &__icon {
+    & > li {
+      @media (max-width: 770px) {
+        border: 1px solid #851515;
+      }
+    }
 
-     }
-   }
- }
+    & > a {
+      background-repeat: no-repeat;
+      display: inline-block;
+      width: 40px;
+      height: 25px;
+      background-size: 35px 24px;
+      cursor: pointer;
+      background-position: center;
+      transition: all 0.1s ease 0.1s;
+      @media (max-width: 770px) {
+        width: 70px;
+        height: 70px;
+        background-size: 75px;
+
+      }
+    }
+  }
+
   // .navbar__jordan
   &__jordan {
     & > a {
       background-image: url("../img/jumpman.svg");
+
       &:hover {
         background-image: url("../img/jumpman_hover.svg");
       }
