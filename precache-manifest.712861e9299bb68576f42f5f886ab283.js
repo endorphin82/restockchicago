@@ -1,27 +1,23 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "19ec7221da225a969049de96fdfd421d",
+    "revision": "4a8fc14321a016dd612c08b477529bb2",
     "url": "./index.html"
   },
   {
-    "revision": "d5bc9530a1953e062e77",
-    "url": "./static/css/2.cd67af34.chunk.css"
+    "revision": "39fa0f287a3d221feafa",
+    "url": "./static/css/main.482264df.chunk.css"
   },
   {
-    "revision": "faa248613bedf37e8381",
-    "url": "./static/css/main.50b880a6.chunk.css"
+    "revision": "6899f6a11903f91efae6",
+    "url": "./static/js/2.c811a47a.chunk.js"
   },
   {
-    "revision": "d5bc9530a1953e062e77",
-    "url": "./static/js/2.65aa1aa9.chunk.js"
+    "revision": "bf23039b4e70a07c5aeb1b4010df3572",
+    "url": "./static/js/2.c811a47a.chunk.js.LICENSE.txt"
   },
   {
-    "revision": "928d7b5eb39d16fe9a880722c974b51e",
-    "url": "./static/js/2.65aa1aa9.chunk.js.LICENSE.txt"
-  },
-  {
-    "revision": "faa248613bedf37e8381",
-    "url": "./static/js/main.d52b0711.chunk.js"
+    "revision": "39fa0f287a3d221feafa",
+    "url": "./static/js/main.7dd2609c.chunk.js"
   },
   {
     "revision": "49c491ab7e435dcb9f29",
@@ -78,10 +74,6 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
     "revision": "c7ef2e9d52a7707690de22a977c90da0",
     "url": "./static/media/nike_sport_hover.c7ef2e9d.svg"
-  },
-  {
-    "revision": "0ce12a17e3b4d32b0892ddeeffb2f919",
-    "url": "./static/media/r-background.0ce12a17.svg"
   },
   {
     "revision": "221ed6a6638ebd6a32b4c6ee8a393eb9",
