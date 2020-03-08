@@ -15,11 +15,11 @@ const Slider = () => {
     <section className="slide">
       <Carousel
         showThumbs={false}
-        autoPlay={true}
+        autoPlay={false}
         showArrows={false}
         statusFormatter={() => null}
       >
-        <div className="slide__1">
+        <div className="slide__1 slide__wrapper">
           <div className="slide__1-text">
             <span>yeezy 350 v2</span>
           </div>
@@ -30,24 +30,24 @@ const Slider = () => {
             <img src={slide_1} alt=""/>
           </div>
         </div>
-        <div className="slide__2">
+        <div className="slide__2 slide__wrapper">
           <div className="slide__2-text">
             <span> jordans for <br/>every occasion</span>
-            <a href="#" className="slide__2-button slide-button">
-              <div>shop now</div>
-            </a>
           </div>
+          <a href="#" className="slide__2-button slide-button">
+            <div>shop now</div>
+          </a>
           <div className="slide__2-img">
             <img src={slide_2} alt=""/>
           </div>
         </div>
-        <div className="slide__3">
+        <div className="slide__3 slide__wrapper">
           <div className="slide__3-text">
             <span>accessories & <br/>collectibles</span>
+          </div>
             <a href="#" className="slide__3-button slide-button">
               <div>shop now</div>
             </a>
-          </div>
           <div className="slide__3-img">
             <img src={slide_3} alt=""/>
           </div>

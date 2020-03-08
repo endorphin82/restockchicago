@@ -36,18 +36,22 @@
       }
 
       &.active span {
+        background-color: #494949;
         transform: scale(0);
       }
 
       &.active:before {
         transform: rotate(45deg);
         top: 17px;
+        background-color: #494949;
 
       }
 
       &.active:after {
         transform: rotate(-45deg);
         bottom: 17px;
+        background-color: #494949;
+
       }
     }
   }
