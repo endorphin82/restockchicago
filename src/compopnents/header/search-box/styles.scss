@@ -1,6 +1,5 @@
 // .search-box
 .search-box {
-  background-color: #F7F7F8;
   background-position: 100% 50%;
   background-image: url('../img/ei-search-dark.svg');
   background-repeat: no-repeat;
@@ -11,6 +10,7 @@
   //}
 
   @media (max-width: 770px) {
+  background-color: #F7F7F8;
     visibility: visible;
   }
 
@@ -36,7 +36,7 @@
     height: 40px;
     transition: width 0.4s ease-in-out;
     cursor: pointer;
-    background-color: #F7F7F8;
+    background-color: #ffffff;
 
     @media (max-width: 770px) {
       position: static;
