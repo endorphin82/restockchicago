@@ -11,11 +11,8 @@
 
   @media (max-width: 770px) {
   background-color: #F7F7F8;
-    visibility: visible;
-  }
-
-  @media (max-width: 770px) {
-
+    //visibility: visible;
+    //position: absolute;
   }
 
   @media (max-width: 580px) {
@@ -23,7 +20,7 @@
     //top: -40px;
   }
 
-  input[type=text] {
+ & > form > input[type=text] {
     position: absolute;
     top: 55px;
     right: 2%;
@@ -53,7 +50,7 @@
     }
   }
 
-  input[type=text]:focus {
+  & > form > input[type=text]:focus {
     top: 50px;
     right: -30%;
     width: 70%;
@@ -66,6 +63,7 @@
     padding-left: 50px;
     cursor: text;
     font-size: 28px;
+    z-index: 5;
     @media (max-width: 770px) {
       margin: 90px 0 0 0;
       position: absolute;
