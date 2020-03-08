@@ -8,6 +8,7 @@
   text-align: center;
   @media (max-width: 770px) {
     flex-direction: column;
+    padding: 40px 0;
   }
 
   // .find-your-fit__title
@@ -46,7 +47,8 @@
     display: inline-block;
     line-height: 46px;
     font-size: 16px;
-
+    @media (max-width: 770px) {
+      width: 100%;}
     &:hover {
       color: #ffffff;
       background-color: #494949;
@@ -63,7 +65,6 @@
       text-align: right;
       padding: 0 24px 0 54px;
       @media (max-width: 770px) {
-        width: 80%;
         text-align: center;
         padding: 0 24px;
         background-image: none;
@@ -88,7 +89,6 @@
       text-align: right;
       padding: 0 54px 0 24px;
       @media (max-width: 770px) {
-        width: 80%;
         text-align: center;
         padding: 0 24px;
         background-image: none;

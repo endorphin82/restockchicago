@@ -4,38 +4,64 @@
   justify-content: space-between;
   align-items: center;
   color: #494949;
+  @media (max-width: 770px) {
+    padding: 5% 0 10% 0;
+    flex-direction: column;
+  }
   // .our-store__title
   &__title {
-    flex: 0 0 33%;
-    margin: 0 0 12px 80px;
+    flex: 0 1 33%;
     font-size: 46px;
+    @media (max-width: 770px) {
+      font-size: 32px;
+      margin: 0 0 5% 0;
+    }
   }
 
   // .our-store__contacts
   &__contacts {
-    flex: 0 0 23%;
+    flex: 0 1 23%;
+
+
+    @media (max-width: 770px) {
+      //flex: 0 1 66.666%;
+    }
   }
 
   // .our-store__empty
   &__empty {
     flex: 1 0 auto;
+    @media (max-width: 770px) {
+      //display: none;
+    }
   }
 }
 
 .contacts {
+
   // .contacts__our-store
   &__our-store {
+    @media (max-width: 770px) {
+      text-align: center;
+    }
     // .contacts__our-store_title-address
     &_title-address {
       font-size: 20px;
       line-height: 48px;
       color: #b2bbc4;
+      @media (max-width: 770px) {
+        font-size: 28px;
+      }
     }
 
     // .contacts__our-store_address
     &_address {
       font-size: 16px;
       line-height: 24px;
+      @media (max-width: 770px) {
+        font-size: 24px;
+        line-height: 32px;
+      }
     }
 
     // .contacts__our-store_tel
@@ -50,6 +76,10 @@
         background-position: 0 center;
         text-align: right;
         padding: 0 0 0 30px;
+        @media (max-width: 770px) {
+          font-size: 24px;
+          line-height: 32px;
+        }
       }
     }
 
@@ -58,12 +88,20 @@
       font-size: 16px;
       font-weight: 700;
       line-height: 24px;
+      @media (max-width: 770px) {
+        font-size: 24px;
+        line-height: 32px;
+      }
     }
 
     // .contacts__our-store_operation
     &_operation {
       font-size: 16px;
       line-height: 24px;
+      @media (max-width: 770px) {
+        font-size: 24px;
+        line-height: 32px;
+      }
     }
   }
 }
