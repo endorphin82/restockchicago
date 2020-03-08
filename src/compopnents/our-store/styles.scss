@@ -5,13 +5,12 @@
   align-items: center;
   color: #494949;
   @media (max-width: 770px) {
-    padding: 0 0 10% 0;
+    padding: 5% 0 10% 0;
     flex-direction: column;
   }
   // .our-store__title
   &__title {
     flex: 0 1 33%;
-    //margin: 0 0 12px 80px;
     font-size: 46px;
     @media (max-width: 770px) {
       font-size: 32px;
