@@ -9,15 +9,16 @@ import MenuItemApparel from "./menu-items/menu-item-apparel";
 import MenuItemAccessories from "./menu-items/menu-item-accessories";
 
 import './styles.scss'
+import SearchBox from "../search-box";
 
 const NavBar = ({ActiveMenuItem, itemName, isOpenBurger}) => {
   const handleClick = (item) => {
     ActiveMenuItem(item)
   };
   return (
-    <div className={isOpenBurger ?"header__navbar navbar active": "header__navbar navbar"}>
+    <div className={isOpenBurger ? "header__navbar navbar active" : "header__navbar navbar"}>
       <ul className="navbar__menu-list">
-        <li className={itemName === 'jordan'? "active navbar__jordan navbar__icon" : "navbar__jordan navbar__icon"}>
+        <li className={itemName === 'jordan' ? "active navbar__jordan navbar__icon" : "navbar__jordan navbar__icon"}>
           <a href="#" onClick={() => handleClick("jordan")}/>
           <MenuItemJordan/>
         </li>
@@ -45,11 +46,7 @@ const NavBar = ({ActiveMenuItem, itemName, isOpenBurger}) => {
         <li><a href="#">gift cards</a></li>
         <li><a href="#">shop all</a></li>
       </ul>
-      <div className="navbar__menu-search">
-        <form>
-          <input type="text" name="search" autoComplete="off"/>
-        </form>
-      </div>
+      <SearchBox/>
     </div>
   );
 };
