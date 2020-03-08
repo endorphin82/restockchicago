@@ -66,9 +66,10 @@
     align-items: center;
 
     @media (max-width: 770px) {
-//padding: 0 10% 0 0;
+      //padding: 0 10% 0 0;
 
     }
+
     & > div {
       @media (max-width: 770px) {
         min-width: 40px;
@@ -106,37 +107,36 @@
     margin: 0 35px 0 0;
     @media (max-width: 770px) {
       margin: 0;
+      color: #b2bbc4;
+      font-size: 32px;
+    }
+    @media (max-width: 580px) {
+      //margin: 0 3% 0 0;
+      font-size: 24px;
     }
     &:hover {
       text-decoration: underline;
     }
 
-    @media (max-width: 770px) {
-      font-size: 20px;
-    }
 
-    @media (max-width: 580px) {
-      //margin: 0 3% 0 0;
-      font-size: 14px;
-    }
   }
 
   &__auth {
-      @media (max-width: 770px) {
-        //justify-content: space-between;
-        min-width: 40px;
-        min-height: 40px;
-        background-size: cover;
-        background-repeat: no-repeat;
-        background-image: url(../img/user-icon.svg);
-        &:hover {
-          background-image: url(../img/user-icon-dark.svg);
-        }
+    @media (max-width: 770px) {
+      //justify-content: space-between;
+      min-width: 40px;
+      min-height: 40px;
+      background-size: cover;
+      background-repeat: no-repeat;
+      background-image: url(../img/user-icon.svg);
+      &:hover {
+        background-image: url(../img/user-icon-dark.svg);
       }
-      @media (max-width: 580px) {
-        width: 30px;
-        height: 30px;
-      }
+    }
+    @media (max-width: 580px) {
+      width: 30px;
+      height: 30px;
+    }
 
     & > a {
       @media (max-width: 770px) {
