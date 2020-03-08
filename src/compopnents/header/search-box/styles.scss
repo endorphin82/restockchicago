@@ -1,14 +1,15 @@
 // .search-box
 .search-box {
   background-color: #F7F7F8;
-  background-image: url('../img/ei-search.svg');
   background-position: 100% 50%;
+  background-image: url('../img/ei-search-dark.svg');
   background-repeat: no-repeat;
 
-  input[type=text]:focus .search-box{
-    background-image: url('../img/ei-search.svg');
+  // 85% global support
+  //&:focus-within {
+  //background-image: url('../img/ei-search-dark.svg');
+  //}
 
-  }
   @media (max-width: 770px) {
     visibility: visible;
   }
