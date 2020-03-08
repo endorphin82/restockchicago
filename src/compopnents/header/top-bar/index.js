@@ -5,6 +5,7 @@ import logoMobile from '../img/header-small.svg'
 import {ActiveMenuItem, ToggleBurger} from "../../../AC";
 
 import './styles.scss'
+import SearchBox from "../search-box";
 
 const TopBar = ({isOpenBurger, ToggleBurger, isMobile, ActiveMenuItem}) => {
   const handleClick = () => {
@@ -22,7 +23,7 @@ const TopBar = ({isOpenBurger, ToggleBurger, isMobile, ActiveMenuItem}) => {
         }
       </a>
       <div className="top-bar__right">
-
+        {isMobile && <SearchBox/>}
         <div className="top-bar__auth">
           <div/>
           <a href="#">Login | SignUp</a>
