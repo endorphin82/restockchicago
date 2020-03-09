@@ -16,9 +16,9 @@ const Slider = () => {
       <Carousel
         showThumbs={false}
         autoPlay={true}
+        infiniteLoop={true}
         showArrows={false}
         statusFormatter={() => null}
-        infiniteLoop={true}
       >
         <div className="slide__1 slide__wrapper">
           <div className="slide__1-text">
