@@ -11,28 +11,24 @@ import './App.scss';
 
 function App({ToggleIsMobile}) {
 
-useEffect(() => {
+  useEffect(() => {
+    (window.outerWidth >= 770) ? ToggleIsMobile(false) : ToggleIsMobile(true);
 
-  let mql = window.matchMedia('(max-width: 770px)');
+    let mql = window.matchMedia('(max-width: 770px)');
 
-  function screenTest(e) {
-    ToggleIsMobile(e.matches)
-  }
+    function screenTest(e) {
+      ToggleIsMobile(e.matches)
+    }
 
-  mql.addListener(screenTest);
+    mql.addListener(screenTest);
 
-  console.log("useEffect", window.outerWidth);
-  if (window.outerWidth <= 770)
-    ToggleIsMobile(true); else {
-    ToggleIsMobile(false)
-  }
-  return () => mql.removeListener(screenTest)
-});
+    return () => mql.removeListener(screenTest)
+  });
 
   return (
     <div>
       <Header/>
-      <Slider />
+      <Slider/>
       <FindYourFit/>
       <OurStore/>
       <Footer/>
