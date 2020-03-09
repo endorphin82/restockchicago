@@ -18,6 +18,7 @@ const Slider = () => {
         autoPlay={false}
         showArrows={false}
         statusFormatter={() => null}
+        infiniteLoop={true}
       >
         <div className="slide__1 slide__wrapper">
           <div className="slide__1-text">
