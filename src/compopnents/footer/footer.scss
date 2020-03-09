@@ -37,6 +37,7 @@
   &__subscribe {
     min-width: 270px;
     @media (max-width: 770px) {
+      margin-top: 2%;
       align-self: center;
       width: 100%;
       order: 1;
