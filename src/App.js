@@ -12,12 +12,17 @@ import './App.scss';
 function App({ToggleIsMobile}) {
 
   useEffect(() => {
-    (window.outerWidth >= 770) ? ToggleIsMobile(false) : ToggleIsMobile(true);
+
+    setTimeout(() => {
+      (window.outerWidth >= 770) ? ToggleIsMobile(false) : ToggleIsMobile(true);
+    }, 300)
 
     let mql = window.matchMedia('(max-width: 770px)');
 
     function screenTest(e) {
-      ToggleIsMobile(e.matches)
+      setTimeout(() => {
+        ToggleIsMobile(e.matches)
+      }, 200)
     }
 
     mql.addListener(screenTest);
