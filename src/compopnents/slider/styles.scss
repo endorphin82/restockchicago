@@ -63,6 +63,7 @@
 
   // .slide__1
   &__1 {
+    position: relative;
     @media (max-width: 770px) {
       position: static;
       display: flex;
@@ -77,11 +78,11 @@
   &__1-text {
     position: absolute;
     top: 150px;
-
     //margin: 0 auto;
-    display: inline-block;
+    width: 100%;
+    //display: inline-block;
     span{
-      text-align: center;
+      //text-align: center;
     }
     @media (max-width: 770px) {
       position: static;
@@ -95,7 +96,8 @@
   &__1-button {
     position: absolute;
     top: 250px;
-    margin: 0 auto;
+    left:50%;
+    margin-left: -80px;
 
   }
 
