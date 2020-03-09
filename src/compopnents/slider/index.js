@@ -15,7 +15,7 @@ const Slider = () => {
     <section className="slide">
       <Carousel
         showThumbs={false}
-        autoPlay={true}
+        autoPlay={false}
         showArrows={false}
         statusFormatter={() => null}
         infiniteLoop={true}
