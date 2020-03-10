@@ -1,0 +1,104 @@
+.footer {
+  background-color: #494949;
+  color: #ffffff;
+  font-size: 16px;
+  line-height: 24px;
+
+  a {
+    color: #ffffff;
+    transition: all 0.1s ease 0.1s;
+
+    &:hover {
+      color: #b2bbc4;
+    }
+  }
+
+  /* .footer__logo */
+  &__logo {
+  }
+
+  /* .footer__terms */
+  &__terms {
+  }
+
+  /* .footer__help */
+  &__help {
+  }
+
+  /* .footer__subscribe */
+  &__subscribe {
+  }
+
+  /* .footer__social */
+  &__social {
+  }
+}
+
+.terms {
+}
+
+.help {
+  /* .help__title */
+  &__title {
+    color: #b2bbc4;
+    text-transform: uppercase;
+    font-size: 14px;
+  }
+
+  /* .help__list */
+  &__list {
+  }
+}
+
+.subscribe {
+  /* .subscribe__title */
+  &__title {
+    color: #b2bbc4;
+    font-size: 20px;
+  }
+
+  /* .subscribe__form */
+  &__form {
+  }
+
+  /* .subscribe__input */
+  &__input {
+    flex: 1 1 auto;
+    margin: 15px 0 15px 15px;
+
+    input {
+      width: 100%;
+      font-size: 16px;
+      background-color: #494949;
+      font-family: Karla;
+      color: #b2bbc4;
+    }
+  }
+
+  /* .subscribe__submit */
+  &__submit {
+  }
+}
+
+.social {
+  display: flex;
+  font-size: 0;
+  margin: 15px 0;
+
+  /* .social__link */
+  &__link {
+    height: 34px;
+    width: 34px;
+    fill: #ffffff;
+    margin: 0 7.5px;
+    transition: all 0.3s ease 0.3s;
+
+    &:first-child {
+      margin-left: -7.5px;
+    }
+
+    &:hover {
+      fill: #b2bbc4;
+    }
+  }
+}
