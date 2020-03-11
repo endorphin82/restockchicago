@@ -15,7 +15,7 @@ function App({ToggleIsMobile}) {
 
     setTimeout(() => {
       (window.outerWidth >= 770) ? ToggleIsMobile(false) : ToggleIsMobile(true);
-    }, 300)
+    }, 320)
 
     let mql = window.matchMedia('(max-width: 770px)');
 
