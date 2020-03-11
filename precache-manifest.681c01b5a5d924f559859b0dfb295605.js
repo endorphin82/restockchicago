@@ -1,11 +1,11 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "0fcfe27e140ce16520e1d54c7c3b4790",
+    "revision": "333c2699a4f620fa5d2cd5d8bb65fb42",
     "url": "./index.html"
   },
   {
-    "revision": "cef6bc238e8f57749579",
-    "url": "./static/css/main.dc49f16a.chunk.css"
+    "revision": "271119f89593fc0af8a0",
+    "url": "./static/css/main.e6a8af92.chunk.css"
   },
   {
     "revision": "1929ff857eadf6a1efdc",
@@ -16,8 +16,8 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "./static/js/2.9e139ea1.chunk.js.LICENSE.txt"
   },
   {
-    "revision": "cef6bc238e8f57749579",
-    "url": "./static/js/main.d32f9ad8.chunk.js"
+    "revision": "271119f89593fc0af8a0",
+    "url": "./static/js/main.010211b1.chunk.js"
   },
   {
     "revision": "49c491ab7e435dcb9f29",
@@ -30,10 +30,6 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
     "revision": "df6b52bf5ec6fdd5c34099a93c75afd2",
     "url": "./static/media/adidas_hover.df6b52bf.svg"
-  },
-  {
-    "revision": "045dd9d501335149a5b8bd5c32b085bb",
-    "url": "./static/media/close.045dd9d5.svg"
   },
   {
     "revision": "67f700d78660076f5d4766ff998ac0c0",
@@ -78,6 +74,10 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
     "revision": "c7ef2e9d52a7707690de22a977c90da0",
     "url": "./static/media/nike_sport_hover.c7ef2e9d.svg"
+  },
+  {
+    "revision": "0ce12a17e3b4d32b0892ddeeffb2f919",
+    "url": "./static/media/r-background.0ce12a17.svg"
   },
   {
     "revision": "221ed6a6638ebd6a32b4c6ee8a393eb9",
