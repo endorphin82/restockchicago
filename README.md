@@ -1,9 +1,3 @@
-#todo: 
-
-mobile menu
-
-adaptive slider
-
 # restockchicago
 https://www.restockchicago.com/
 # speedpage 

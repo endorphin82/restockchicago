@@ -13,6 +13,7 @@
 
   &__active {
     visibility: visible !important;
+
   }
 
   @media (max-width: 770px) {
@@ -59,6 +60,7 @@
   display: flex;
   justify-content: space-between;
   flex-wrap: nowrap;
+
   @media (max-width: 770px) {
     //visibility: hidden;
     display: none;
