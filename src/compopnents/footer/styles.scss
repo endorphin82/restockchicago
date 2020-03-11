@@ -3,6 +3,17 @@
   color: #ffffff;
   font-size: 16px;
   line-height: 24px;
+  padding: 20px 35px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  @media (max-width: 993px) {
+    font-size: 14px;
+  }
+  @media (max-width: 770px) {
+    flex-wrap: wrap;
+  }
 
   a {
     color: #ffffff;
@@ -13,24 +24,116 @@
     }
   }
 
+  &__left {
+    display: none;
+    @media (max-width: 770px) {
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      justify-content: flex-start;
+      flex: 1 1 50%;
+      order: 1;
+      &_logo {
+        display: none;
+        @media (max-width: 770px) {
+          display: block;
+          min-width: 67px !important;
+          margin-bottom: 10px;
+          img {
+            min-width: 67px !important;
+          }
+        }
+      }
+      &_terms {
+        display: none;
+        @media (max-width: 770px) {
+
+          display: block;
+        }
+      }
+    }
+  }
+
   /* .footer__logo */
   &__logo {
+    display: block;
+    order: 1;
+
+    @media (max-width: 770px) {
+      display: none;
+    }
+
+    img {
+      width: 67px;
+      @media (max-width: 770px) {
+        display: none;
+      }
+    }
   }
 
   /* .footer__terms */
   &__terms {
+    display: inline-block;
+    order: 2;
+    @media (max-width: 770px) {
+      display: none;
+    }
   }
 
   /* .footer__help */
   &__help {
+    order: 3;
+    @media (max-width: 770px) {
+      flex: 1 1 50%;
+      order: 2;
+    }
   }
 
   /* .footer__subscribe */
   &__subscribe {
+    min-width: 207px;
+    margin-right: 20px;
+    order: 4;
+    @media (max-width: 770px) {
+      order: 5;
+      flex: 1 1 100%;
+      p{
+        text-transform: none !important;
+      }
+    }
+
+    p {
+      font-size: 20px;
+      line-height: 28px;
+      margin: 0 0 10px;
+    }
+
+    @media (max-width: 993px) {
+      p {
+        text-transform: uppercase;
+        font-size: 14px;
+      }
+    }
+
+
   }
 
   /* .footer__social */
   &__social {
+    order: 5;
+    @media (max-width: 770px) {
+      flex: 1 1 50%;
+      order: 4;
+    }
+  }
+}
+
+.empty {
+  display: none;
+  @media (max-width: 770px) {
+    display: block;
+    flex: 1 1 50%;
+    order: 3;
   }
 }
 
@@ -59,6 +162,12 @@
 
   /* .subscribe__form */
   &__form {
+    border: 1px solid #b2bbc4;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 0;
+    line-height: 0;
   }
 
   /* .subscribe__input */
@@ -77,6 +186,7 @@
 
   /* .subscribe__submit */
   &__submit {
+    margin: auto 15px;
   }
 }
 

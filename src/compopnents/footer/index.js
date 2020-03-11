@@ -7,6 +7,16 @@ const Footer = () => {
     return (
         <section className="footer">
 
+            <div className="footer__left">
+                <div className="footer__left_logo">
+                    <img src={logo} alt=""/>
+                </div>
+                <div className="footer__left_terms terms">
+                    <p><a href="#">Terms of Use</a></p>
+                    <p><a href="#">Privacy Policy</a></p>
+                </div>
+            </div>
+
             <div className="footer__logo">
                 <img src={logo} alt=""/>
             </div>
@@ -31,6 +41,9 @@ const Footer = () => {
                         Contact Us
                     </a></li>
                 </ul>
+            </div>
+            <div className="empty">
+
             </div>
             <div className="footer__subscribe subscribe">
                 <p className="subscribe__title">
