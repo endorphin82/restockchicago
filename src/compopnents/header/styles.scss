@@ -1,14 +1,9 @@
 .header {
   position: fixed;
   top: 0;
-  left: 0;
+  //left: 0;
   width: 100%;
   z-index: 4;
-  //box-sizing: content-box;
-  //@media (max-width: 770px) {
-  //  height: 115px;
-  //}
-  //@media (max-width: 580px) {
-  //  height: 70px;
-  //}
+  max-width: 1366px;
+  overflow: hidden;
 }

@@ -114,7 +114,7 @@
       margin-top: 0;
       padding: 5px; }
       .carousel.carousel-slider .control-arrow:hover {
-        background: rgba(0, 0, 0, 0.2); }
+        background: rgba(0, 0, 0, 0); }
   .carousel .slider-wrapper {
     overflow: hidden;
     margin: auto;

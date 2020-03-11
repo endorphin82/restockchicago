@@ -3,6 +3,14 @@
 }
 
 .slide {
+  background-image: url(./img/r-background.svg);
+  border: none;
+  background-size: 56%;
+  background-repeat: no-repeat;
+  background-position: -5% 30%;
+  margin-bottom: 0;
+  background-color: rgba( 0, 0, 0, 0) !important;
+
   &__wrapper {
     position: relative;
     margin-top: 50px;
@@ -12,6 +20,10 @@
     line-height: 56px;
     color: #494949;
     width: 100%;
+    background-color: rgba( 0, 0, 0, 0) !important;
+
+
+    background-color: #ffffff;
     @media (max-width: 770px) {
       position: static;
       display: flex;
@@ -62,6 +74,7 @@
   // .slide__1
   &__1 {
     position: relative;
+    background-color: rgba( 0, 0, 0, 0) !important;
     @media (max-width: 770px) {
       position: static;
       display: flex;

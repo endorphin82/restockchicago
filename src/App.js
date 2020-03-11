@@ -31,7 +31,7 @@ function App({ToggleIsMobile}) {
   });
 
   return (
-    <div>
+    <div className="container">
       <Header/>
       <Slider/>
       <FindYourFit/>
