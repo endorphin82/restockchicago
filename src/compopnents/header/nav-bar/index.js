@@ -7,9 +7,9 @@ import MenuItemAdidas from "./menu-items/menu-item-adidas";
 import MenuItemSupreme from "./menu-items/menu-item-supreme";
 import MenuItemApparel from "./menu-items/menu-item-apparel";
 import MenuItemAccessories from "./menu-items/menu-item-accessories";
+import SearchBox from "../search-box";
 
 import './styles.scss'
-import SearchBox from "../search-box";
 
 const NavBar = ({ActiveMenuItem, itemName, isOpenBurger}) => {
   const handleClick = (item) => {

@@ -1,110 +1,127 @@
-// .search-box
-.search-box {
-  background-position: 100% 50%;
-  background-image: url('../img/ei-search-dark.svg');
-  background-repeat: no-repeat;
 
-  // 85% global support
-  //&:focus-within {
-  //background-image: url('../img/ei-search-dark.svg');
-  //}
-
-  @media (max-width: 770px) {
-  background-color: #F7F7F8;
-    //visibility: visible;
-    //position: absolute;
-  }
-
-  @media (max-width: 580px) {
-    //right: 30%;
-    //top: -40px;
-  }
-
- & > form > input[type=text] {
-    position: absolute;
-    top: 55px;
-    right: 2%;
-    color: white;
-    box-sizing: border-box;
-    background-image: url('../img/ei-search.svg');
-    background-position: 100% 50%;
-    background-repeat: no-repeat;
-    width: 40px;
+.search {
+  &-wrapper {
+    position: relative;
     height: 40px;
-    transition: width 0.4s ease-in-out;
-    cursor: pointer;
-    background-color: #ffffff;
+    width: 40px;
+    background-position: 100% 50%;
+    background-image: url('../img/ei-search.svg');
+    background-repeat: no-repeat;
 
     @media (max-width: 770px) {
-      position: static;
-      //padding-left: 20%;
-      //padding: 0;
-      width: 100%;
-      background-color: #F7F7F8;
-      background-image: url('../img/ei-search.svg');
-      background-position: 100% 50%;
-      background-repeat: no-repeat;
+      &.open {
+        background-image: url('../img/ei-search-dark.svg');
+      }
     }
-    @media (max-width: 580px) {
-      //right: 0;
-    }
+
   }
-  & > form {
-    display: flex;
-    .close{
-      //position: absolute;
-      top: 0;
-      left: 0;
-      width: 1rem;
-      height: 100%;
-      z-index: 10;
-    }
-  }
-  & > form > input[type=text]:focus {
-    top: 50px;
-    right: -30%;
-    width: 70%;
-    height: 50px;
-    //background-image: url('../img/close.svg');
-    //background-position: 0 50%;
-    background-color: #494949;
-    color: white;
-    border: 2px solid #494949;
-    padding-left: 50px;
-    cursor: text;
-    font-size: 28px;
-    z-index: 5;
-    //position: relative;
-    &:before{
-      content: "";
-      position: absolute;
-      top: 0;
-      left: 0;
-      width: 30px;
-      height: 30px;
-      z-index: 10;
-      background-image: url('../img/close.svg');
-      background-position: 0 50%;
-    }
-    @media (max-width: 770px) {
-      margin: 90px 0 0 0;
-      position: absolute;
-      top: 30px;
-      right: 0;
+
+  &-box {
+    input[type=text] {
+      width: 1px;
+      height: 1px;
+
+      //TODO
+    //font-size: 0;
+
+      //color: #ffffff;
+      //font-size: 24px;
+      //height: 98%;
+      //width: 100%;
+      //background-color: #494949;
+      //padding-left: 10px;
+      ////border: 1px dotted #494949;
+      //z-index: 10;
+      //display: none;
+      opacity: 0;
+      transition: background-color 1s linear;
+      @media (max-width: 770px) {
+      transition: none;
+      }
+
+      }
+
+    input[type=text]:focus {
+      display: inline-block;
+      opacity: 1;
+      color: #ffffff;
+      font-size: 24px;
+      height: 98%;
       width: 100%;
-      height: 80px;
-      //background-image: url('../img/close.svg');
-      //background-position: 0 50%;
       background-color: #494949;
-      color: white;
-      border: 2px solid #494949;
-      padding-left: 80px;
-      cursor: text;
+      padding-left: 10px;
+      //border: 1px dotted #494949;
+      z-index: 10;
+      @media (max-width: 770px) {
+        order: 1;
+        height: 99%;
+
+      }
     }
-    @media (max-width: 580px) {
-      margin: 40px 0 0 0;
+
+    //transition: all 1s ease-in;
+
+
+    &.open {
+
+      position: absolute;
+      display: flex;
+      //border: 1px solid blue;
+      width: 550px;
+      height: 60px;
+      right: -35px;
+      background-color: #494949;
+      top: -10px;
+      align-items: center;
+      padding-left: 10px;
+      @media (max-width: 770px) {
+        height: 80px;
+
+        width: 100vw;
+        top: 80px;
+        right: -220px;
+      }
+      @media (max-width: 580px) {
+        top: 60px;
+        right: -105px;
+        //left: 0;
+        width: 100vw;
+        //width: 250px;
+
+      }
+
     }
   }
 }
 
+.close {
+  //left: 0;
+  //top:0;
 
+  display: none;
+
+  &.open {
+    display: block;
+    height: 40px;
+    width: 40px;
+    background-color: #494949;
+    @media (max-width: 770px) {
+      order: 2;
+      height: 60px;
+      width: 60px;
+    }
+    @media (max-width: 580px) {
+
+      height: 50px;
+      width: 50px;
+    }
+  }
+
+  /* .close__icon */
+  &__icon {
+    //position: relative;
+    height: 100%;
+    width: 100%;
+    //border: 1px solid yellow;
+  }
+}

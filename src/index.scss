@@ -25,14 +25,14 @@ body {
   -moz-osx-font-smoothing: grayscale;
 
   // off scroll
-  &.lock {
-    overflow: hidden;
-    @media (max-width: 770px) {
-      width: 100%;
-      position: fixed;
-      overflow: hidden;
-    }
-  }
+  //&.lock {
+  //  overflow: hidden;
+  //  @media (max-width: 770px) {
+  //    width: 100%;
+  //    position: fixed;
+  //    overflow: hidden;
+  //  }
+  //}
 }
 
 code {
