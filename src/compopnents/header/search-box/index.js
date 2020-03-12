@@ -4,9 +4,11 @@ import './styles.scss'
 const SearchBox = () => {
     const [isOpen, toggleOpen] = useState(false)
     const [isBlur, toggleBlur] = useState(false)
+
     const inputRef = useRef();
 
     console.log("isOpen", isOpen);
+    console.log("isBlur", isBlur);
     // console.log("isOpenClickToggle", isOpenClickToggle);
 
     if (isOpen) {
@@ -28,12 +30,13 @@ const SearchBox = () => {
 
         if (!isBlur) {
             toggleOpen(!isOpen)
+        } else if (isBlur && !isOpen){
+            toggleOpen(true);
         }
-
         toggleBlur(false);
     }
 
-    const handleBlur = e => {
+    const handleBlur = (e) => {
         e.stopPropagation();
         toggleOpen(false);
         toggleBlur(true)
