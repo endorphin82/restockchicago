@@ -17,15 +17,21 @@ const SearchBox = () => {
     }
 
     const handleClickOpen = (e) => {
+        console.log("Open");
+
         e.stopPropagation();
 
         toggleOpen(true);
     }
     const handleClickClose = (e) => {
+        console.log("Close");
+
         e.stopPropagation();
         toggleOpen(false);
     }
     const handleClickToggle = (e) => {
+        console.log("Togle");
+
         e.stopPropagation();
 
         if (!isBlur) {
@@ -37,6 +43,7 @@ const SearchBox = () => {
     }
 
     const handleBlur = (e) => {
+        console.log("Blur");
         e.stopPropagation();
         toggleOpen(false);
         toggleBlur(true)
