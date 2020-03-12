@@ -1,35 +1,32 @@
-import React, {useState} from 'react';
+import React, {useRef, useState} from 'react';
 import './styles.scss'
 
 const SearchBox = () => {
     const [isOpen, toggleOpen] = useState(false)
     const [isBlur, toggleBlur] = useState(false)
+    const inputRef = useRef();
 
     console.log("isOpen", isOpen);
     // console.log("isOpenClickToggle", isOpenClickToggle);
 
     if (isOpen) {
-        document.getElementsByClassName("input")[0].focus();
-
+        // document.getElementsByClassName("input")[0].focus();
+        inputRef.current.focus();
     }
 
     const handleClickOpen = (e) => {
-        console.log('Open');
         e.stopPropagation();
 
         toggleOpen(true);
     }
     const handleClickClose = (e) => {
-        console.log('Close');
         e.stopPropagation();
         toggleOpen(false);
     }
     const handleClickToggle = (e) => {
-        console.log('Toggle');
         e.stopPropagation();
 
         if (!isBlur) {
-
             toggleOpen(!isOpen)
         }
 
@@ -38,7 +35,6 @@ const SearchBox = () => {
 
     const handleBlur = e => {
         e.stopPropagation();
-        console.log('Blur');
         toggleOpen(false);
         toggleBlur(true)
     }
@@ -55,9 +51,9 @@ const SearchBox = () => {
                     </div>
                 </div>
                 <input className="input"
-                       onBlur={(e) => handleBlur(e)}
-                    // onFocus={handleClickOpen}
-                    onClick={handleClickOpen}
+                       ref={inputRef}
+                       onBlur={handleBlur}
+                       onClick={handleClickOpen}
                        type="text"
                        name="search" autoComplete="off"/>
             </div>
