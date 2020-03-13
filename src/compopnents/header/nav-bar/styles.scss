@@ -3,9 +3,14 @@
   position: fixed;
   z-index: 3;
   top: 93px;
-  left: 0;
   height: 415px;
   width: 100%;
+
+  //trick item align center
+  transform: translateX(-50%);
+  left: 50%;
+
+  max-width: 1366px;
   visibility: hidden;
   box-shadow: 0 6px 4px -2px rgba(0, 0, 0, 0.07);
   background-color: #F7F7F8;
@@ -47,11 +52,11 @@
   }
   // .header__navbar
   &__navbar {
-    padding: 10px 35px 10px 35px;
+    //padding: 10px 35px 10px 35px;
     background-color: #fdfdfd;
     box-shadow: 0 6px 4px -2px rgba(0, 0, 0, 0.07);
     @media (max-width: 770px) {
-      padding: 15px 0;
+      //padding: 15px 0;
     }
   }
 }
@@ -76,26 +81,37 @@
 
   // .navbar__menu-list
   &__menu-list {
+    display: table;
+    box-sizing: border-box;
+    float: left;
+    width: 92%;
+
     @media (max-width: 900px) {
       font-size: 12px;
       margin-right: 2%;
     }
 
-    flex: 1 1 auto;
-    justify-content: space-between;
-    display: flex;
-    align-items: center;
+    //flex: 1 1 auto;
+    //justify-content: space-between;
+    //display: flex;
+    //align-items: center;
     position: relative;
 
     @media (max-width: 770px) {
       //position: relative;
+      display: flex;
       flex-direction: column;
+      width: 100%;
+
       //overflow: auto;
     }
 
     & > li {
-      margin-right: 5%;
-
+      //margin-right: 5%;
+      text-align: center;
+      display: table-cell;
+      width: 5%;
+      vertical-align: middle;
       @media (max-width: 770px) {
         width: 100%;
         margin: 0;
@@ -121,6 +137,8 @@
     & > li > a {
       color: #b2bbc4;
       text-transform: uppercase;
+      line-height: 48px;
+      font-size: 16px;
       transition: all 0.1s ease 0.1s;
 
       &:hover {
@@ -148,11 +166,15 @@
     }
 
     & > a {
+      box-sizing: border-box !important;
       background-repeat: no-repeat;
-      display: inline-block;
-      width: 40px;
-      height: 25px;
-      background-size: 35px 24px;
+      display: block;
+      //width: 100%;
+      //width: 100%;
+      padding: 0 5px;
+      height: 48px;
+      position: relative;
+
       cursor: pointer;
       background-position: center;
       transition: all 0.1s ease 0.1s;
@@ -168,12 +190,18 @@
   // .navbar__jordan
   &__jordan {
     & > a {
+
       background-image: url("../img/jumpman.svg");
+      background-size: 24px 22px;
 
       &:hover {
         background-image: url("../img/jumpman_hover.svg");
       }
 
+
+      @media (max-width: 770px) {
+        background-size: 70px;
+      }
     }
 
     &.active > a {
@@ -184,28 +212,42 @@
   &__nike {
     & > a {
       background-image: url("../img/nike_sport.svg");
+      background-size: 63px 23px;
 
       &:hover {
         background-image: url("../img/nike_sport_hover.svg");
+      }
+
+      @media (max-width: 770px) {
+        background-size: 70px;
       }
     }
 
     &.active > a {
       background-image: url("../img/nike_sport_hover.svg");
     }
+
+
   }
 
   &__adidas {
     & > a {
       background-image: url("../img/adidas.svg");
+      background-size: 35px 24px;
 
       &:hover {
         background-image: url("../img/adidas_hover.svg");
+      }
+
+      @media (max-width: 770px) {
+        background-size: 70px;
       }
     }
 
     &.active > a {
       background-image: url("../img/adidas_hover.svg");
     }
+
+
   }
 }

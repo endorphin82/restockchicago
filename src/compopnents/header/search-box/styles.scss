@@ -3,11 +3,14 @@
   &-wrapper {
     position: relative;
     height: 40px;
-    width: 40px;
-    background-position: 100% 50%;
+    //width: 40px;
+    background-position-x: -5px;
+    background-position-y: 5px;
+    background-size: 40px 40px;
+    float: left;
     background-image: url('../img/ei-search.svg');
     background-repeat: no-repeat;
-
+    width: 6%;
     @media (max-width: 770px) {
       &.open {
         background-image: url('../img/ei-search-dark.svg');
@@ -17,6 +20,13 @@
   }
 
   &-box {
+
+    background-image: url(/static/media/ei-search.5203e9f8.svg);
+    background-repeat: no-repeat;
+    background-position: right;
+
+    width: 100%;
+
     input[type=text] {
       width: 1px;
       height: 1px;
@@ -42,23 +52,22 @@
       @media (max-width: 770px) {
         order: 1;
         height: 99%;
-
       }
     }
 
-    //transition: all 1s ease-in;
-
+    transition: none;
 
     &.open {
-
+      transition: all 1s ease;
       position: absolute;
       display: flex;
       //border: 1px solid blue;
-      width: 550px;
-      height: 60px;
-      right: -35px;
+      width: 600px;
+      height: 50px;
+      right: 0;
       background-color: #494949;
-      top: -10px;
+
+      top: 0;
       align-items: center;
       padding-left: 10px;
       @media (max-width: 770px) {
@@ -82,16 +91,17 @@
 }
 
 .close {
-  //left: 0;
-  //top:0;
+  height: 1px;
+  width: 1px;
 
-  display: none;
+  //display: none;
 
   &.open {
     display: block;
     height: 40px;
     width: 40px;
     background-color: #494949;
+
     @media (max-width: 770px) {
       order: 2;
       height: 60px;
