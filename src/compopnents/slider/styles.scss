@@ -10,6 +10,12 @@
   background-position: -5% 30%;
   margin-bottom: 0;
   background-color: rgba( 0, 0, 0, 0) !important;
+  @media (max-width: 770px) {
+    background-size: 56%;
+    background-position: 30% 100%;
+    //margin: 40% 0 0 30%;
+
+  }
 
   &__wrapper {
     position: relative;
@@ -21,8 +27,6 @@
     color: #494949;
     width: 100%;
     background-color: rgba( 0, 0, 0, 0) !important;
-
-
     background-color: #ffffff;
     @media (max-width: 770px) {
       position: static;

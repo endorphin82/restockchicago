@@ -11,7 +11,7 @@ import SearchBox from "../search-box";
 
 import './styles.scss'
 
-const NavBar = ({ActiveMenuItem, itemName, isOpenBurger}) => {
+const NavBar = ({ActiveMenuItem, itemName, isOpenBurger, isMobile}) => {
   const handleClick = (item) => {
     ActiveMenuItem(item)
   };
@@ -46,14 +46,15 @@ const NavBar = ({ActiveMenuItem, itemName, isOpenBurger}) => {
         <li><a href="#">gift cards</a></li>
         <li><a href="#">shop all</a></li>
       </ul>
-      <SearchBox/>
+      {!isMobile && <SearchBox/>}
     </div>
   );
 };
 
 export default connect(state => ({
     isOpenBurger: state.burger.isOpen,
-    itemName: state.active_menu_item.Item
+    itemName: state.active_menu_item.Item,
+      isMobile: state.toggle_mobile.isMobile
   }),
   {ActiveMenuItem}
 )(NavBar);

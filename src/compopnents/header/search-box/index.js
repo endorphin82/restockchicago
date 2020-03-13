@@ -7,16 +7,11 @@ const SearchBox = () => {
 
     const inputRef = useRef();
 
-    console.log("isOpen", isOpen);
-    console.log("isBlur", isBlur);
-
     if (isOpen) {
         inputRef.current.focus();
     }
 
     const handleClickToggle = (e) => {
-        console.log("Togle");
-
         e.stopPropagation();
 
             if (!isBlur && !isOpen) {
@@ -27,10 +22,8 @@ const SearchBox = () => {
     }
 
     const handleBlur = (e) => {
-        console.log("Blur");
         e.stopPropagation();
         if (isOpen) {
-            console.log("if !Blur");
             toggleBlur(true);
             toggleOpen(false);
             setTimeout(() =>

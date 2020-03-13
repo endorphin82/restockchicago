@@ -13,21 +13,13 @@ function App({ToggleIsMobile}) {
 
   useEffect(() => {
 
-    setTimeout(() => {
-      (window.outerWidth >= 770) ? ToggleIsMobile(false) : ToggleIsMobile(true);
-    }, 320)
+      screenTest();
 
-    let mql = window.matchMedia('(max-width: 770px)');
-
-    function screenTest(e) {
-      setTimeout(() => {
-        ToggleIsMobile(e.matches)
-      }, 200)
-    }
-
-    mql.addListener(screenTest);
-
-    return () => mql.removeListener(screenTest)
+      window.addEventListener('resize', screenTest)
+      function screenTest(){
+          (window.innerWidth >= 770) ? ToggleIsMobile(false) : ToggleIsMobile(true);
+      }
+    return () => window.removeListener('resize', screenTest)
   });
 
   return (
