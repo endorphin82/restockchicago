@@ -1,8 +1,6 @@
 
 .search {
   &-wrapper {
-    transition: none;
-    //transition-property: width;
     position: relative;
 
     width: 82px;
@@ -48,7 +46,7 @@
       }
 
     }
-
+    transition: none;
     &.open {
       //transition-duration: 3s;
       //transition-property: width;
@@ -93,9 +91,6 @@
         height: 99%;
       }
     }
-
-    //transition: none;
-    transition-duration: 3s;
 
     &.open {
 
