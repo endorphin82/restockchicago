@@ -36,6 +36,7 @@
 
     &.open:after {
       background-image: url(../img/ei-search-white.svg);
+      transition: all 1s ease;
     }
 
     @media (max-width: 770px) {
@@ -59,23 +60,20 @@
     input[type=text] {
       width: 1px;
       height: 1px;
-      //transition: none;
 
       font-size: 1px;
       //font-size: 24px;
       opacity: 0;
       transition: none;
 
-      //transition: background-color 1s linear;
       @media (max-width: 770px) {
         transition: none;
       }
     }
 
     input[type=text]:focus {
-      transition-property: background-color;
-      transition-duration: 3s;
-      //transition-property: width;
+      //transition-property: background-color;
+      //transition-duration: 3s;
       display: inline-block;
       opacity: 1;
       color: #ffffff;
@@ -87,13 +85,12 @@
       //border: 1px dotted #494949;
       //z-index: 10;
       @media (max-width: 770px) {
-        order: 1;
+        //order: 1;
         height: 99%;
       }
     }
 
     &.open {
-
       position: absolute;
       display: flex;
       //font-size: 24px;
@@ -108,7 +105,11 @@
       align-items: center;
       padding-left: 10px;
 
-      transition-duration: 3s;
+      transition-duration: 1s;
+
+      @media (max-width: 770px) {
+        transition: none;
+      }
       @media (max-width: 770px) {
         flex-direction: row-reverse;
         height: 80px;
@@ -143,10 +144,10 @@
     width: 40px;
     background-color: #494949;
 
-    transition-duration: 3s;
+    //transition-duration: 3s;
 
     @media (max-width: 770px) {
-      order: 2;
+      transition: none;
       height: 60px;
       width: 60px;
     }
