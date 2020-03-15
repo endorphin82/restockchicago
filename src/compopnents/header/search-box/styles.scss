@@ -21,7 +21,6 @@
       width: 50px;
       height: 40px;
       //border:  1px solid #333333;
-
     }
 
     @media (max-width: 770px) {
@@ -54,14 +53,16 @@
   &-box {
 
     input[type=text] {
-      width: 1px;
-      height: 1px;
+      //width: 1px;
+      //height: 1px;
+
+      //font-size: 1px;
+      font-size: 24px;
       opacity: 0;
       transition: background-color 1s linear;
       @media (max-width: 770px) {
         transition: none;
       }
-
     }
 
     input[type=text]:focus {
@@ -74,7 +75,7 @@
       background-color: #494949;
       padding-left: 10px;
       //border: 1px dotted #494949;
-      z-index: 10;
+      //z-index: 10;
       @media (max-width: 770px) {
         order: 1;
         height: 99%;
@@ -87,6 +88,8 @@
       transition: all 1s ease;
       position: absolute;
       display: flex;
+      //font-size: 24px;
+
       //border: 1px solid blue;
       width: 600px;
       height: 50px;
