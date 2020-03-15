@@ -87,14 +87,18 @@
 
     & > div {
       @media (max-width: 770px) {
-        min-width: 32px;
-        min-height: 42px;
-        margin: 0 40px 0 0;
+        margin: 0 20px 0 0;
+        &:nth-child(1){
+          margin: 0;
+        }
+        &:nth-child(2){
+          margin: 0 90px 0 0;
+        }
       }
       @media (max-width: 580px) {
-        margin: 0 15px 0 0;
+        //margin: 0 20px 0 0;
         &:last-child{
-          margin: 0;
+          //margin: 0;
         }
       }
     }
@@ -142,8 +146,8 @@
   &__auth {
     @media (max-width: 770px) {
       //justify-content: space-between;
-      min-width: 32px !important;
-      min-height: 32px !important;
+      min-width: 40px;
+      min-height: 40px;
       background-size: cover;
       background-repeat: no-repeat;
       background-image: url(../img/user-icon.svg);
@@ -152,7 +156,7 @@
       }
     }
     @media (max-width: 580px) {
-      transform: scale(0.80);
+      transform: scale(0.50);
     }
 
     & > a {
