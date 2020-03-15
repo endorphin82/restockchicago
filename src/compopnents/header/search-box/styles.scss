@@ -1,7 +1,8 @@
 
 .search {
   &-wrapper {
-
+    transition: none;
+    //transition-property: width;
     position: relative;
 
     width: 82px;
@@ -48,24 +49,35 @@
 
     }
 
+    &.open {
+      //transition-duration: 3s;
+      //transition-property: width;
+    }
   }
 
   &-box {
+    width: 1px;
 
     input[type=text] {
-      //width: 1px;
-      //height: 1px;
+      width: 1px;
+      height: 1px;
+      //transition: none;
 
-      //font-size: 1px;
-      font-size: 24px;
+      font-size: 1px;
+      //font-size: 24px;
       opacity: 0;
-      transition: background-color 1s linear;
+      transition: none;
+
+      //transition: background-color 1s linear;
       @media (max-width: 770px) {
         transition: none;
       }
     }
 
     input[type=text]:focus {
+      transition-property: background-color;
+      transition-duration: 3s;
+      //transition-property: width;
       display: inline-block;
       opacity: 1;
       color: #ffffff;
@@ -82,23 +94,26 @@
       }
     }
 
-    transition: none;
+    //transition: none;
+    transition-duration: 3s;
 
     &.open {
-      transition: all 1s ease;
+
       position: absolute;
       display: flex;
       //font-size: 24px;
-
+      //transition-property: width;
       //border: 1px solid blue;
-      width: 600px;
+      width: 650px;
       height: 50px;
       right: 0;
-      background-color: #494949;
-
       top: 0;
+
+      background-color: #494949;
       align-items: center;
       padding-left: 10px;
+
+      transition-duration: 3s;
       @media (max-width: 770px) {
         flex-direction: row-reverse;
         height: 80px;
@@ -127,10 +142,13 @@
   //display: none;
 
   &.open {
+
     display: block;
     height: 40px;
     width: 40px;
     background-color: #494949;
+
+    transition-duration: 3s;
 
     @media (max-width: 770px) {
       order: 2;
@@ -149,6 +167,9 @@
     //position: relative;
     height: 100%;
     width: 100%;
+
+    transition-duration: 3s;
+
     //border: 1px solid yellow;
   }
 }

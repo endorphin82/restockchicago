@@ -1,4 +1,8 @@
 .header {
+  overflow: hidden;
+  @media (max-width: 770px) {
+    overflow: visible;
+  }
   &__top-bar {
     &_burger {
       align-self: center;
