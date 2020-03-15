@@ -81,10 +81,17 @@
 
   // .navbar__menu-list
   &__menu-list {
-    display: table;
-    box-sizing: border-box;
-    float: left;
-    width: 92%;
+    //display: table;
+    //box-sizing: border-box;
+    //float: left;
+    //width: 92%;
+    //position: relative;
+
+    flex: 1 1 92%;
+    justify-content: space-around;
+    display: flex;
+    align-items: center;
+    position: relative;
 
     @media (max-width: 900px) {
       font-size: 12px;
@@ -95,7 +102,7 @@
     //justify-content: space-between;
     //display: flex;
     //align-items: center;
-    position: relative;
+    //position: relative;
 
     @media (max-width: 770px) {
       //position: relative;
@@ -109,13 +116,15 @@
     & > li {
       //margin-right: 5%;
       text-align: center;
-      display: table-cell;
-      width: 5%;
-      vertical-align: middle;
+      //display: table-cell;
+      //width: 5%;
+      //vertical-align: middle;
+      box-sizing: border-box;
       @media (max-width: 770px) {
         width: 100%;
         margin: 0;
         & > a {
+          //box-sizing: border-box;
           padding: 55px;
           display: block;
           width: 100%;
@@ -170,7 +179,6 @@
       background-repeat: no-repeat;
       display: block;
       //width: 100%;
-      //width: 100%;
       padding: 0 5px;
       height: 48px;
       position: relative;
@@ -193,7 +201,8 @@
 
       background-image: url("../img/jumpman.svg");
       background-size: 24px 22px;
-
+      width: 24px;
+      height: 22px;
       &:hover {
         background-image: url("../img/jumpman_hover.svg");
       }
@@ -213,7 +222,8 @@
     & > a {
       background-image: url("../img/nike_sport.svg");
       background-size: 63px 23px;
-
+      width: 63px;
+      height: 23px;
       &:hover {
         background-image: url("../img/nike_sport_hover.svg");
       }
@@ -232,6 +242,8 @@
 
   &__adidas {
     & > a {
+      width: 35px;
+      height: 24px;
       background-image: url("../img/adidas.svg");
       background-size: 35px 24px;
 

@@ -2,7 +2,7 @@ import React, {useRef, useState} from 'react';
 import './styles.scss';
 
 const SearchBox = () => {
-    const [isOpen, setIsOpen] = useState(true)
+    const [isOpen, setIsOpen] = useState(false)
     const [isBlur, setIsBlur] = useState(false)
 
     // const inputRef = useRef();
