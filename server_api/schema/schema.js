@@ -28,6 +28,7 @@ const BrandType = new GraphQLObjectType({
     fields: () => ({
         id: {type: GraphQLID},
         name: {type: new GraphQLNonNull(GraphQLString)},
+        icon: {type: new GraphQLNonNull(GraphQLString)},
         brand: {
             type: new GraphQLList(ProductType),
             resolve({id}, args) {
@@ -35,4 +36,42 @@ const BrandType = new GraphQLObjectType({
             },
         },
     }),
+})
+
+const Query = new GraphQLObjectType({
+    name: "Query",
+    fields: {
+        product: {
+            type: ProductType,
+            args: {id: {type: GraphQLID}},
+            resolve(parent, {id}) {
+                return Products.findById(id)
+            },
+        },
+        brand: {
+            type: BrandType,
+            args: {id: {type: GraphQLID}},
+            resolve(parent, {id}) {
+                return Brands.findById(id)
+            },
+        },
+        products: {
+            type: new GraphQLList(ProductType),
+            args: {name: {type: GraphQLString}},
+            resolve(parent, {name}) {
+                return Products.find({name: {$regex: name, $options: "i"}});
+            },
+        },
+        brands: {
+            type: new GraphQLList(ProductType),
+            args: {name: {type: GraphQLString}},
+            resolve(parent, {name}) {
+                return Brands.find({name: {$regex: name, $options: "i"}});
+            },
+        },
+    }
+})
+
+module.exports = new GraphQLSchema({
+    query: Query
 })
