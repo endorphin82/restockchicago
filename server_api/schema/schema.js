@@ -28,7 +28,7 @@ const BrandType = new GraphQLObjectType({
     fields: () => ({
         id: {type: GraphQLID},
         name: {type: new GraphQLNonNull(GraphQLString)},
-        icon: {type: new GraphQLNonNull(GraphQLString)},
+        icon: {type: GraphQLString},
         brand: {
             type: new GraphQLList(ProductType),
             resolve({id}, args) {
