@@ -210,5 +210,13 @@
     &:hover {
       fill: #b2bbc4;
     }
+
+    @media (max-width: 330px) {
+      margin: 0 5px;
+
+      &:first-child {
+        margin-left: -5px;
+      }
+    }
   }
 }

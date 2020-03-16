@@ -1,8 +1,8 @@
 
 .menu-item {
   position: fixed;
-  z-index: 3;
-  top: 93px;
+  z-index: 2;
+  top: 102px;
   height: 415px;
   width: 100%;
 
@@ -81,12 +81,7 @@
 
   // .navbar__menu-list
   &__menu-list {
-    //display: table;
-    //box-sizing: border-box;
-    //float: left;
-    //width: 92%;
-    //position: relative;
-    margin: 0px 2%;
+    margin: 0 2% 0 1.5%;
     flex: 1 1 92%;
     justify-content: space-around;
     display: flex;
@@ -138,7 +133,7 @@
     &:not(li) {
       @media (max-width: 770px) {
         margin: 0 auto;
-        position: relative;
+        //position: relative;
       }
     }
 
@@ -149,6 +144,46 @@
       line-height: 48px;
       font-size: 16px;
       transition: all 0.1s ease 0.1s;
+      position: relative;
+      @media (max-width: 770px) {
+        font-size: 44px;
+        padding: 80px 0;
+
+        &:before,
+        &:after {
+          content: "";
+          background-color: #b2bbc4;
+          position: absolute;
+          right: 10px;
+          top: 10px;
+          width: 5px;
+          height: 2px;
+          transition: all 0.3s ease 0s;
+        }
+
+        &:before {
+          right: 12px;
+          transform: rotate(45deg);
+        }
+
+        &:after {
+          right: 9px;
+          transform: rotate(-45deg);
+          //background-color: #494949;
+        }
+&:last-child{
+  &:after,
+  &:before{
+    visibility:hidden;
+  }
+}
+      }
+
+      @media (max-width: 580px) {
+        font-size: 22px;
+        padding: 40px 0;
+        line-height: 0px;
+      }
 
       &:hover {
         color: #494949;
@@ -158,6 +193,32 @@
     .active > a {
       text-decoration: underline;
       color: #494949;
+      position: relative;
+      @media (max-width: 770px) {
+        background-color: #b2bbc4;
+        &:before,
+        &:after {
+          content: "";
+          background-color: tomato;
+          opacity: 0.5;
+          position: absolute;
+          right: 10px;
+          top: 10px;
+          width: 5px;
+          height: 2px;
+          transition: all 0.3s ease 0s;
+        }
+
+        &:before {
+          right: 12px;
+          transform: rotate(-45deg);
+        }
+
+        &:after {
+          right: 9px;
+          transform: rotate(45deg);
+        }
+      }
     }
 
     & > img {
@@ -169,13 +230,11 @@
 
   &__icon {
     & > li {
-      @media (max-width: 770px) {
-        border: 1px solid #851515;
-      }
+
     }
 
     & > a {
-      box-sizing: border-box !important;
+      //box-sizing: b/order-box !important;
       background-repeat: no-repeat;
       display: block;
       //width: 100%;
@@ -189,7 +248,31 @@
       @media (max-width: 770px) {
         width: 70px;
         height: 70px;
-        background-size: 75px;
+
+        position: relative;
+        &:before,
+        &:after {
+          content: "";
+          background-color: #b2bbc4;
+          position: absolute;
+          right: 10px;
+          top: 10px;
+          width: 5px;
+          height: 2px;
+          transition: all 0.3s ease 0s;
+        }
+
+        &:before {
+          right: 12px;
+          transform: rotate(45deg);
+        }
+
+        &:after {
+          right: 9px;
+          transform: rotate(-45deg);
+          //background-color: #494949;
+        }
+
 
       }
     }
@@ -198,15 +281,14 @@
   // .navbar__jordan
   &__jordan {
     & > a {
-
       background-image: url("../img/jumpman.svg");
       background-size: 24px 22px;
       width: 24px;
       height: 22px;
+
       &:hover {
         background-image: url("../img/jumpman_hover.svg");
       }
-
 
       @media (max-width: 770px) {
         background-size: 70px;
@@ -224,6 +306,7 @@
       background-size: 63px 23px;
       width: 63px;
       height: 23px;
+
       &:hover {
         background-image: url("../img/nike_sport_hover.svg");
       }
@@ -236,8 +319,6 @@
     &.active > a {
       background-image: url("../img/nike_sport_hover.svg");
     }
-
-
   }
 
   &__adidas {

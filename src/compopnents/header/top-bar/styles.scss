@@ -105,8 +105,16 @@
       }
       @media (max-width: 580px) {
         //margin: 0 20px 0 0;
-        &:last-child{
-          //margin: 0;
+        &:nth-child(2){
+          margin: 0 50px 0 0;
+        }
+      }
+      @media (max-width: 410px) {
+        &:nth-child(1){
+          margin: 0 -10px 0 0;
+        }
+        &:nth-child(2){
+          margin: 0 20px 0 0;
         }
       }
     }
