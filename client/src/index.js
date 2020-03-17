@@ -7,9 +7,10 @@ import store from "./store";
 import {Provider} from "react-redux";
 import ApolloClient from "apollo-boost";
 import {ApolloProvider} from "react-apollo";
+import {BASE_URL} from "./AC/ActionTypes";
 
 const client = new ApolloClient({
-    uri: `http://localhost:3005/graphql`,
+    uri: BASE_URL,
 });
 
 ReactDOM.render(
