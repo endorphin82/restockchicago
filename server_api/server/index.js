@@ -5,7 +5,7 @@ const mongoose = require("mongoose")
 const cors = require("cors")
 
 const app = express()
-const PORT = 3005
+const PORT = process.env.PORT || 3005
 // mongoose.connect('mongodb://localhost:27017/restockchicago', {useNewUrlParser: true})
 mongoose.connect('mongodb://user:123user@ds329668.mlab.com:29668/restockchicago', {useNewUrlParser: true})
 

@@ -6,7 +6,7 @@ const {
     GraphQLBoolean,
 } = graphql
 
-const Brands = require("../models/brand")
+const Categories = require("../models/category")
 const Products = require("../models/product")
 
 const ProductType = new GraphQLObjectType({
@@ -14,25 +14,25 @@ const ProductType = new GraphQLObjectType({
     fields: () => ({
         id: {type: GraphQLID},
         name: {type: new GraphQLNonNull(GraphQLString)},
-        brand: {
-            type: BrandType,
-            resolve({brandId}, args) {
-                return Brands.findById(brandId)
+        category: {
+            type: CategoryType,
+            resolve({categoryId}, args) {
+                return Categories.findById(categoryId)
             },
         },
     }),
 })
 
-const BrandType = new GraphQLObjectType({
-    name: "Brand",
+const CategoryType = new GraphQLObjectType({
+    name: "Category",
     fields: () => ({
         id: {type: GraphQLID},
         name: {type: new GraphQLNonNull(GraphQLString)},
         icon: {type: GraphQLString},
-        brand: {
+        category: {
             type: new GraphQLList(ProductType),
             resolve({id}, args) {
-                return Products.findById({brandId: id})
+                return Products.findById({categoryId: id})
             },
         },
     }),
@@ -48,11 +48,11 @@ const Query = new GraphQLObjectType({
                 return Products.findById(id)
             },
         },
-        brand: {
-            type: BrandType,
+        category: {
+            type: CategoryType,
             args: {id: {type: GraphQLID}},
             resolve(parent, {id}) {
-                return Brands.findById(id)
+                return Categories.findById(id)
             },
         },
         products: {
@@ -62,11 +62,11 @@ const Query = new GraphQLObjectType({
                 return Products.find({name: {$regex: name, $options: "i"}});
             },
         },
-        brands: {
+        categories: {
             type: new GraphQLList(ProductType),
             args: {name: {type: GraphQLString}},
             resolve(parent, {name}) {
-                return Brands.find({name: {$regex: name, $options: "i"}});
+                return Categories.find({name: {$regex: name, $options: "i"}});
             },
         },
     }
