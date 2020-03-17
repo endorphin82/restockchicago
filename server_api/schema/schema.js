@@ -32,7 +32,7 @@ const CategoryType = new GraphQLObjectType({
         category: {
             type: new GraphQLList(ProductType),
             resolve({id}, args) {
-                return Products.findById({categoryId: id})
+                return Products.find({categoryId: id})
             },
         },
     }),
@@ -63,7 +63,7 @@ const Query = new GraphQLObjectType({
             },
         },
         categories: {
-            type: new GraphQLList(ProductType),
+            type: new GraphQLList(CategoryType),
             args: {name: {type: GraphQLString}},
             resolve(parent, {name}) {
                 return Categories.find({name: {$regex: name, $options: "i"}});
