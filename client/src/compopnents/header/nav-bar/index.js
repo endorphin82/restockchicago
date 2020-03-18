@@ -1,6 +1,8 @@
-import React from 'react';
+import React, {useEffect, useRef} from 'react';
 import {connect} from "react-redux";
+import {gql} from "apollo-boost";
 import {ActiveMenuItem} from "../../../AC";
+import {client} from "../../../store/apollo-client";
 import MenuItemJordan from "./menu-items/menu-item-jordan";
 import MenuItemNike from "./menu-items/menu-item-nike";
 import MenuItemAdidas from "./menu-items/menu-item-adidas";
@@ -8,13 +10,35 @@ import MenuItemSupreme from "./menu-items/menu-item-supreme";
 import MenuItemApparel from "./menu-items/menu-item-apparel";
 import MenuItemAccessories from "./menu-items/menu-item-accessories";
 import SearchBox from "../search-box";
-
 import './styles.scss'
 
+//TODO:
+//  http://html-plus.in.ua/obrabotka-sobytiy-onmouseover-i-onmouseout/
+// лучше менять класс, через который будет меняться позиционирование картинок
+// с абсолюта на рилейтив и обратно, чтобы при старте страницы обе картинки уже
+// были прогружены
+
 const NavBar = ({ActiveMenuItem, itemName, isOpenBurger, isMobile}) => {
+  useEffect(() => {
+    client
+    .query({
+      query: gql`
+          {
+              categoryByName(name: "") {
+                  name,
+                  icons
+              }
+          }
+      `
+    })
+    .then(result => console.log(result));
+
+  }, [])
+
   const handleClick = (item) => {
     ActiveMenuItem(item)
   };
+
   return (
     <div className={isOpenBurger ? "header__navbar navbar active" : "header__navbar navbar"}>
       <ul className="navbar__menu-list">
@@ -54,7 +78,7 @@ const NavBar = ({ActiveMenuItem, itemName, isOpenBurger, isMobile}) => {
 export default connect(state => ({
     isOpenBurger: state.burger.isOpen,
     itemName: state.active_menu_item.Item,
-      isMobile: state.toggle_mobile.isMobile
+    isMobile: state.toggle_mobile.isMobile
   }),
   {ActiveMenuItem}
 )(NavBar);
