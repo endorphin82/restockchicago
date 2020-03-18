@@ -1,4 +1,4 @@
-const graphql = require("graphql");
+const graphql = require("graphql")
 
 const {
     GraphQLObjectType, GraphQLString, GraphQLSchema,
@@ -28,7 +28,8 @@ const CategoryType = new GraphQLObjectType({
     fields: () => ({
         id: {type: GraphQLID},
         name: {type: new GraphQLNonNull(GraphQLString)},
-        icon: {type: GraphQLString},
+        icon: {type: new GraphQLList(GraphQLString)},
+        image: {type: new GraphQLList(GraphQLString)},
         category: {
             type: new GraphQLList(ProductType),
             resolve({id}, args) {
