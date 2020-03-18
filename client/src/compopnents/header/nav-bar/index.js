@@ -12,6 +12,12 @@ import MenuItemAccessories from "./menu-items/menu-item-accessories";
 import SearchBox from "../search-box";
 import './styles.scss'
 
+//TODO:
+//  http://html-plus.in.ua/obrabotka-sobytiy-onmouseover-i-onmouseout/
+// лучше менять класс, через который будет меняться позиционирование картинок
+// с абсолюта на рилейтив и обратно, чтобы при старте страницы обе картинки уже
+// были прогружены
+
 const NavBar = ({ActiveMenuItem, itemName, isOpenBurger, isMobile}) => {
   useEffect(() => {
     client
