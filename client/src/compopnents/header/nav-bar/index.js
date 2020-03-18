@@ -1,6 +1,8 @@
-import React from 'react';
+import React, {useEffect} from 'react';
 import {connect} from "react-redux";
+import { gql } from "apollo-boost";
 import {ActiveMenuItem} from "../../../AC";
+import {client} from "../../../store/apollo-client";
 import MenuItemJordan from "./menu-items/menu-item-jordan";
 import MenuItemNike from "./menu-items/menu-item-nike";
 import MenuItemAdidas from "./menu-items/menu-item-adidas";
@@ -8,13 +10,30 @@ import MenuItemSupreme from "./menu-items/menu-item-supreme";
 import MenuItemApparel from "./menu-items/menu-item-apparel";
 import MenuItemAccessories from "./menu-items/menu-item-accessories";
 import SearchBox from "../search-box";
-
 import './styles.scss'
 
 const NavBar = ({ActiveMenuItem, itemName, isOpenBurger, isMobile}) => {
+  useEffect(()=>{
+    client
+    .query({
+      query: gql`
+          {
+              categoryByName(name: "") {
+                  id,
+                  name,
+                  icons
+              }
+          }
+      `
+    })
+    .then(result => console.log(result));
+
+  },[])
+
   const handleClick = (item) => {
     ActiveMenuItem(item)
   };
+
   return (
     <div className={isOpenBurger ? "header__navbar navbar active" : "header__navbar navbar"}>
       <ul className="navbar__menu-list">
