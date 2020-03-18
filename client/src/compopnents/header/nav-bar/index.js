@@ -1,6 +1,6 @@
-import React, {useEffect} from 'react';
+import React, {useEffect, useRef} from 'react';
 import {connect} from "react-redux";
-import { gql } from "apollo-boost";
+import {gql} from "apollo-boost";
 import {ActiveMenuItem} from "../../../AC";
 import {client} from "../../../store/apollo-client";
 import MenuItemJordan from "./menu-items/menu-item-jordan";
@@ -13,13 +13,12 @@ import SearchBox from "../search-box";
 import './styles.scss'
 
 const NavBar = ({ActiveMenuItem, itemName, isOpenBurger, isMobile}) => {
-  useEffect(()=>{
+  useEffect(() => {
     client
     .query({
       query: gql`
           {
               categoryByName(name: "") {
-                  id,
                   name,
                   icons
               }
@@ -28,7 +27,7 @@ const NavBar = ({ActiveMenuItem, itemName, isOpenBurger, isMobile}) => {
     })
     .then(result => console.log(result));
 
-  },[])
+  }, [])
 
   const handleClick = (item) => {
     ActiveMenuItem(item)
@@ -73,7 +72,7 @@ const NavBar = ({ActiveMenuItem, itemName, isOpenBurger, isMobile}) => {
 export default connect(state => ({
     isOpenBurger: state.burger.isOpen,
     itemName: state.active_menu_item.Item,
-      isMobile: state.toggle_mobile.isMobile
+    isMobile: state.toggle_mobile.isMobile
   }),
   {ActiveMenuItem}
 )(NavBar);
