@@ -12,19 +12,19 @@ mongoose.connect('mongodb://user:123user@ds329668.mlab.com:29668/restockchicago'
 app.use(cors())
 
 app.use('/graphql', graphqlHTTP({
-    schema,
-    graphiql: true,
+  schema,
+  graphiql: true,
 }))
 
 const dbConnection = mongoose.connection;
 dbConnection.on("error", err => {
-    console.log(`Connection error: ${err}`)
+  console.log(`Connection error: ${err}`)
 })
 
 dbConnection.once("open", () => {
-    console.log("Connected to DB")
+  console.log("Connected to DB")
 })
 
 app.listen(PORT, err => {
-    err ? console.log(err) : console.log(`Server started on PORT ${PORT}`)
+  err ? console.log(err) : console.log(`Server started on PORT ${PORT}`)
 })
