@@ -1,9 +1,7 @@
-import React, { useEffect, useRef } from "react"
+import React  from "react"
 import { useQuery } from "@apollo/react-hooks"
 import { connect } from "react-redux"
-import { gql } from "apollo-boost"
 import { ActiveMenuItem } from "../../../AC"
-import { client } from "../../../store/apollo-client"
 import MenuItemJordan from "./menu-items/menu-item-jordan"
 import MenuItemNike from "./menu-items/menu-item-nike"
 import MenuItemAdidas from "./menu-items/menu-item-adidas"
@@ -22,16 +20,21 @@ import { categoriesAllQuery } from "./query"
 // были прогружены
 
 const NavBar = ({ ActiveMenuItem, itemName, isOpenBurger, isMobile }) => {
-  const {data} = useQuery(categoriesAllQuery)
+  const { loading, error, data } = useQuery(categoriesAllQuery)
 
-  console.log(data)
+  if (loading) return <p>Loading ...</p>;
+  const { categoriesAll } = data
+
+  console.log(categoriesAll)
+
   const handleClick = (item) => {
     ActiveMenuItem(item)
   }
-
   return (
     <div className={isOpenBurger ? "header__navbar navbar active" : "header__navbar navbar"}>
       <ul className="navbar__menu-list">
+
+
         <li className={itemName === "jordan" ? "active navbar__jordan navbar__icon" : "navbar__jordan navbar__icon"}>
           <a href="#" onClick={() => handleClick("jordan")}/>
           <MenuItemJordan/>
