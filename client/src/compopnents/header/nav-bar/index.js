@@ -1,4 +1,5 @@
 import React, { useEffect, useRef } from "react"
+import { useQuery } from "@apollo/react-hooks"
 import { connect } from "react-redux"
 import { gql } from "apollo-boost"
 import { ActiveMenuItem } from "../../../AC"
@@ -12,6 +13,7 @@ import MenuItemAccessories from "./menu-items/menu-item-accessories"
 import SearchBox from "../search-box"
 
 import "./styles.scss"
+import { categoriesAllQuery } from "./query"
 
 //TODO:
 //  http://html-plus.in.ua/obrabotka-sobytiy-onmouseover-i-onmouseout/
@@ -20,22 +22,9 @@ import "./styles.scss"
 // были прогружены
 
 const NavBar = ({ ActiveMenuItem, itemName, isOpenBurger, isMobile }) => {
-  useEffect(() => {
-    client
-    .query({
-      query: gql`
-        {
-            categoriesAll{
-                name,
-                icons
-            }
-        }
-      `
-    })
-    .then(result => console.log(result))
+  const {data} = useQuery(categoriesAllQuery)
 
-  }, [])
-
+  console.log(data)
   const handleClick = (item) => {
     ActiveMenuItem(item)
   }
