@@ -26,5 +26,5 @@ dbConnection.once("open", () => {
 })
 
 app.listen(PORT, err => {
-  err ? console.log(err) : console.log(`Server started on PORT ${PORT}`)
+  err ? console.log(err) : console.log(`The server is running at http://localhost:${PORT}/graphql`)
 })
