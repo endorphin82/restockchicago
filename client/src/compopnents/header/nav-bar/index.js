@@ -10,6 +10,7 @@ import MenuItemSupreme from "./menu-items/menu-item-supreme";
 import MenuItemApparel from "./menu-items/menu-item-apparel";
 import MenuItemAccessories from "./menu-items/menu-item-accessories";
 import SearchBox from "../search-box";
+
 import './styles.scss'
 
 //TODO:

@@ -70,7 +70,10 @@ const Query = new GraphQLObjectType({
         return Categories.find({name: {$regex: name, $options: "i"}})
       },
     },
-
+    categoriesAll: {
+      type:  new GraphQLList(CategoryType),
+      resolve:() => Categories.find({})
+    },
     // products: {
     //   type: new GraphQLList(ProductType),
     //   args: {name: {type: GraphQLString}},
