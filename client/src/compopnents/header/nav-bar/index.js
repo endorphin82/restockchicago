@@ -1,4 +1,4 @@
-import React  from "react"
+import React from "react"
 import { useQuery } from "@apollo/react-hooks"
 import { connect } from "react-redux"
 import { ActiveMenuItem } from "../../../AC"
