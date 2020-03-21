@@ -1,4 +1,4 @@
-import React  from "react"
+import React from "react"
 import { useQuery } from "@apollo/react-hooks"
 import { connect } from "react-redux"
 import { ActiveMenuItem } from "../../../AC"
@@ -33,10 +33,8 @@ const NavBar = ({ ActiveMenuItem, itemName, isOpenBurger, isMobile }) => {
   return (
     <div className={isOpenBurger ? "header__navbar navbar active" : "header__navbar navbar"}>
       <ul className="navbar__menu-list">
-
-
         <li className={itemName === "jordan" ? "active navbar__jordan navbar__icon" : "navbar__jordan navbar__icon"}>
-          <a href="#" onClick={() => handleClick("jordan")}/>
+          <a href="#" onClick={() => handleClick("jordan")}><img src={categoriesAll[0].icons[0]} alt=""/></a>
           <MenuItemJordan/>
         </li>
         <li className={itemName === "nike" ? "active navbar__nike navbar__icon" : "navbar__nike navbar__icon"}>
@@ -48,20 +46,20 @@ const NavBar = ({ ActiveMenuItem, itemName, isOpenBurger, isMobile }) => {
           <MenuItemAdidas/>
         </li>
         <li className={itemName === "supreme" ? "active" : ""}>
-          <a href="#" onClick={() => handleClick("supreme")}>supreme</a>
+          <a href="#" onClick={() => handleClick("supreme")}>{categoriesAll[3].name}</a>
           <MenuItemSupreme/>
         </li>
         <li className={itemName === "apparel" ? "active" : ""}>
-          <a href="#" onClick={() => handleClick("apparel")}>apparel</a>
+          <a href="#" onClick={() => handleClick("apparel")}>{categoriesAll[4].name}</a>
           <MenuItemApparel/>
         </li>
         <li className={itemName === "accessories" ? "active" : ""}>
-          <a href="#" onClick={() => handleClick("accessories")}>accessories</a>
+          <a href="#" onClick={() => handleClick("accessories")}>{categoriesAll[5].name}</a>
           <MenuItemAccessories/>
         </li>
-        <li><a href="#">new arrivals</a></li>
-        <li><a href="#">gift cards</a></li>
-        <li><a href="#">shop all</a></li>
+        <li><a href="#">{categoriesAll[6].name}</a></li>
+        <li><a href="#">{categoriesAll[7].name}</a></li>
+        <li><a href="#">{categoriesAll[8].name}</a></li>
       </ul>
       {!isMobile && <SearchBox/>}
     </div>

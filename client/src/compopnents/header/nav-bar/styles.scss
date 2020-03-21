@@ -171,12 +171,12 @@
           transform: rotate(-45deg);
           //background-color: #494949;
         }
-&:last-child{
-  &:after,
-  &:before{
-    visibility:hidden;
-  }
-}
+        &:last-child {
+          &:after,
+          &:before {
+            visibility: hidden;
+          }
+        }
       }
 
       @media (max-width: 580px) {
@@ -273,7 +273,6 @@
           //background-color: #494949;
         }
 
-
       }
     }
   }
@@ -281,18 +280,30 @@
   // .navbar__jordan
   &__jordan {
     & > a {
-      background-image: url("../img/jumpman.svg");
-      background-size: 24px 22px;
-      width: 24px;
-      height: 22px;
+
+      display: flex;
+      justify-content: center;
+      align-items: center;
+
+      img {
+        width: 24px;
+        height: 22px;
+
+        @media (max-width: 770px) {
+          align-self: center;
+          width: 70px;
+          height: 70px;
+        }
+      }
+
+      //background-image: url("../img/jumpman.svg");
+      //background-size: 24px 22px;
 
       &:hover {
-        background-image: url("../img/jumpman_hover.svg");
+        //background-image: url("../img/jumpman_hover.svg");
       }
 
-      @media (max-width: 770px) {
-        background-size: 70px;
-      }
+
     }
 
     &.active > a {
