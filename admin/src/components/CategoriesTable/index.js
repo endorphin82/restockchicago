@@ -22,7 +22,7 @@ const CategoriesTable = () => {
       key: "id"
     },
     {
-      title: "Icon",
+      title: "Icons",
       dataIndex: "icons",
       key: "icons",
       render: icons => {
@@ -36,7 +36,7 @@ const CategoriesTable = () => {
                  style={{ width: "20px", height: "20px" }}/>
           </div>
 
-               ) : <span> no icon</span>
+               ) : <span>no icons</span>
       }
     }
   ]
