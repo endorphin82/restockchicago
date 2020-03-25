@@ -1,5 +1,6 @@
 import React from "react"
 import { useQuery } from "@apollo/react-hooks"
+import Skeleton from "react-loading-skeleton"
 import { connect } from "react-redux"
 import { ActiveMenuItem } from "../../../AC"
 import MenuItemJordan from "./menu-items/menu-item-jordan"
@@ -22,7 +23,7 @@ import { categoriesAllQuery } from "./query"
 const NavBar = ({ ActiveMenuItem, itemName, isOpenBurger, isMobile }) => {
   const { loading, error, data } = useQuery(categoriesAllQuery)
 
-  if (loading) return <p>Loading ...</p>;
+  if (loading) return <Skeleton/>
   const { categoriesAll } = data
 
   console.log(categoriesAll)
@@ -30,11 +31,12 @@ const NavBar = ({ ActiveMenuItem, itemName, isOpenBurger, isMobile }) => {
   const handleClick = (item) => {
     ActiveMenuItem(item)
   }
+
   return (
     <div className={isOpenBurger ? "header__navbar navbar active" : "header__navbar navbar"}>
       <ul className="navbar__menu-list">
         <li className={itemName === "jordan" ? "active navbar__jordan navbar__icon" : "navbar__jordan navbar__icon"}>
-          <a href="#" onClick={() => handleClick("jordan")}><img src={categoriesAll[0].icons[0]} alt=""/></a>
+          <a href="#" onClick={() => handleClick("jordan")}/>
           <MenuItemJordan/>
         </li>
         <li className={itemName === "nike" ? "active navbar__nike navbar__icon" : "navbar__nike navbar__icon"}>
