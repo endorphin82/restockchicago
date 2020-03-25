@@ -27,9 +27,15 @@ const CategoriesTable = () => {
       key: "icons",
       render: icons => {
         return (icons.length !== 0) ? (
-          <img alt="img"
-               src={icons[0]}
-               style={{ width: "20px", height: "20px" }}/>
+          <div>
+            <img alt="img"
+                 src={icons[0]}
+                 style={{ width: "20px", height: "20px", marginRight: "10px" }}/>
+            <img alt="img"
+                 src={icons[1]}
+                 style={{ width: "20px", height: "20px" }}/>
+          </div>
+
                ) : <span> no icon</span>
       }
     }
