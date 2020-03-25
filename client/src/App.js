@@ -11,6 +11,8 @@ import OurStore from "./compopnents/our-store"
 
 import "./App.scss"
 
+console.log("process", process.env)
+
 function App({ ToggleIsMobile }) {
 
   useEffect(() => {
@@ -25,7 +27,6 @@ function App({ ToggleIsMobile }) {
 
     return () => window.removeListener("resize", screenTest)
   })
-
   return (
     <div className="container">
       <Header/>
