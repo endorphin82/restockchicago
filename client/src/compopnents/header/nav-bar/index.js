@@ -23,7 +23,7 @@ import { categoriesAllQuery } from "./query"
 const NavBar = ({ ActiveMenuItem, itemName, isOpenBurger, isMobile }) => {
   const { loading, error, data } = useQuery(categoriesAllQuery)
 
-  if (loading) return <Skeleton/>
+  if (loading) return <Skeleton height={50}/>
   const { categoriesAll } = data
 
   console.log(categoriesAll)
