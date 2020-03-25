@@ -1,29 +1,24 @@
 {
-  "name": "restockchicago",
+  "name": "admin",
   "version": "0.1.0",
   "private": true,
-  "homepage": ".",
   "dependencies": {
-    "@apollo/react-hooks": "^3.1.3",
     "@testing-library/jest-dom": "^4.2.4",
     "@testing-library/react": "^9.3.2",
     "@testing-library/user-event": "^7.1.2",
+    "antd": "^4.0.4",
     "apollo-boost": "^0.4.7",
     "graphql": "^14.6.0",
-    "react": "^16.12.0",
+    "react": "^16.13.1",
     "react-apollo": "^3.1.3",
-    "react-app-env": "^1.2.3",
-    "react-dom": "^16.12.0",
-    "react-loading-skeleton": "^2.0.1",
-    "react-redux": "^7.2.0",
-    "react-responsive-carousel": "^3.1.51",
-    "react-scripts": "3.4.0",
-    "redux": "^4.0.5"
+    "react-dom": "^16.13.1",
+    "react-scripts": "3.4.1"
   },
   "scripts": {
     "start": "react-app-env start --env-file='../development.env'",
     "build": "react-scripts build",
-    "deploy-gh-pages": "npm run build && gh-pages -d build"
+    "test": "react-scripts test",
+    "eject": "react-scripts eject"
   },
   "eslintConfig": {
     "extends": "react-app"
@@ -39,9 +34,5 @@
       "last 1 firefox version",
       "last 1 safari version"
     ]
-  },
-  "devDependencies": {
-    "gh-pages": "^2.2.0",
-    "node-sass": "^4.13.1"
   }
 }
