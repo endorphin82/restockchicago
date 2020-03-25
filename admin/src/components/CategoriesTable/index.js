@@ -35,8 +35,7 @@ const CategoriesTable = () => {
                  src={icons[1]}
                  style={{ width: "20px", height: "20px" }}/>
           </div>
-
-               ) : <span>no icons</span>
+        ) : <span>no icons</span>
       }
     }
   ]
