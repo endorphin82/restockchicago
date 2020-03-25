@@ -11,8 +11,6 @@ import OurStore from "./compopnents/our-store"
 
 import "./App.scss"
 
-console.log("process", process.env)
-
 function App({ ToggleIsMobile }) {
 
   useEffect(() => {

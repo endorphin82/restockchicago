@@ -1,24 +1,25 @@
 import React from "react"
-import logo from "./logo.svg"
+import TabsContainer from "./components/TabsContainer"
+import "antd/dist/antd.css";
 import "./App.css"
 
 function App() {
   return (
     <div className="App">
       <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo"/>
         <p>
-          Edit <code>src/App.js</code> and save to reload.
+          <code> APP</code>
         </p>
         <a
           className="App-link"
-          href="https://reactjs.org"
+          href={process.env.REACT_APP_BASE_URL}
           target="_blank"
           rel="noopener noreferrer"
         >
-          Learn React
+          REACT_APP_BASE_URL
         </a>
       </header>
+      <TabsContainer/>
     </div>
   )
 }
