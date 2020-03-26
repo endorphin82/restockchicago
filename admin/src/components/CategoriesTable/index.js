@@ -3,7 +3,7 @@ import { useQuery } from "@apollo/react-hooks"
 import { Table } from "antd"
 import { categoriesAllQuery } from "../Categories/query"
 
-const styleIconInTable = { width: "20px", height: "20px", marginRight: "10px" }
+const styleIconInTable = { width: "20px", height: "100%", marginRight: "10px" }
 
 const CategoriesTable = () => {
   const { loading, error, data } = useQuery(categoriesAllQuery)
@@ -32,9 +32,10 @@ const CategoriesTable = () => {
           ? <div>
             {
               icons
-                .map(icon => <img alt="img"
-                                  src={icon}
-                                  style={styleIconInTable}/>
+                .map(icon => <img
+                  key={icon} alt="img"
+                  src={icon}
+                  style={styleIconInTable}/>
                 )
             }
           </div>
@@ -45,7 +46,7 @@ const CategoriesTable = () => {
 
   return (
     <>
-      <Table dataSource={categoriesAll} columns={columns}/>
+      <Table dataSource={categoriesAll} columns={columns} rowKey="id"/>
     </>
   )
 }

@@ -14,6 +14,8 @@ const ProductType = new GraphQLObjectType({
   fields: () => ({
     id: { type: GraphQLID },
     name: { type: new GraphQLNonNull(GraphQLString) },
+    price:  { type: new GraphQLNonNull(GraphQLInt) },
+    images: { type: new GraphQLList(GraphQLString) },
     category: {
       type: CategoryType,
       resolve({ categoryId }, args) {
@@ -83,6 +85,11 @@ const Query = new GraphQLObjectType({
         return Categories.findById(id)
       }
     },
+    productsAll: {
+      type: new GraphQLList(ProductType),
+      resolve: () => Products.find({})
+    },
+
     categoryByName: {
       type: new GraphQLList(CategoryType),
       args: { name: { type: GraphQLString } },
