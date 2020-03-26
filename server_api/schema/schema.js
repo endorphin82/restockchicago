@@ -74,6 +74,13 @@ const Query = new GraphQLObjectType({
       type:  new GraphQLList(CategoryType),
       resolve:() => Categories.find({})
     },
+    categoriesByListNames: {
+      type:  new GraphQLList(CategoryType),
+      args: {names: {type: new GraphQLList(GraphQLString)}},
+      resolve(parent, {names}) {
+        return Categories.find({name: {$in: names} })
+      },
+    },
     // products: {
     //   type: new GraphQLList(ProductType),
     //   args: {name: {type: GraphQLString}},
