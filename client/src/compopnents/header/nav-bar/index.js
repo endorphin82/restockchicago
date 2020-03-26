@@ -12,7 +12,7 @@ import MenuItemAccessories from "./menu-items/menu-item-accessories"
 import SearchBox from "../search-box"
 
 import "./styles.scss"
-import { categoriesAllQuery } from "./query"
+import { categoriesByListNamesQuery } from "./query"
 
 //TODO:
 //  http://html-plus.in.ua/obrabotka-sobytiy-onmouseover-i-onmouseout/
@@ -21,12 +21,12 @@ import { categoriesAllQuery } from "./query"
 // были прогружены
 
 const NavBar = ({ ActiveMenuItem, itemName, isOpenBurger, isMobile }) => {
-  const { loading, error, data } = useQuery(categoriesAllQuery)
+  const { loading, error, data } = useQuery(categoriesByListNamesQuery)
 
   if (loading) return <Skeleton height={50}/>
-  const { categoriesAll } = data
+  const { categoriesByListNames } = data
 
-  console.log(categoriesAll)
+  console.log(categoriesByListNames)
 
   const handleClick = (item) => {
     ActiveMenuItem(item)
@@ -48,20 +48,20 @@ const NavBar = ({ ActiveMenuItem, itemName, isOpenBurger, isMobile }) => {
           <MenuItemAdidas/>
         </li>
         <li className={itemName === "supreme" ? "active" : ""}>
-          <a href="#" onClick={() => handleClick("supreme")}>{categoriesAll[3].name}</a>
+          <a href="#" onClick={() => handleClick("supreme")}>{categoriesByListNames[3].name}</a>
           <MenuItemSupreme/>
         </li>
         <li className={itemName === "apparel" ? "active" : ""}>
-          <a href="#" onClick={() => handleClick("apparel")}>{categoriesAll[4].name}</a>
+          <a href="#" onClick={() => handleClick("apparel")}>{categoriesByListNames[4].name}</a>
           <MenuItemApparel/>
         </li>
         <li className={itemName === "accessories" ? "active" : ""}>
-          <a href="#" onClick={() => handleClick("accessories")}>{categoriesAll[5].name}</a>
+          <a href="#" onClick={() => handleClick("accessories")}>{categoriesByListNames[5].name}</a>
           <MenuItemAccessories/>
         </li>
-        <li><a href="#">{categoriesAll[6].name}</a></li>
-        <li><a href="#">{categoriesAll[7].name}</a></li>
-        <li><a href="#">{categoriesAll[8].name}</a></li>
+        <li><a href="#">{categoriesByListNames[6].name}</a></li>
+        <li><a href="#">{categoriesByListNames[7].name}</a></li>
+        <li><a href="#">{categoriesByListNames[8].name}</a></li>
       </ul>
       {!isMobile && <SearchBox/>}
     </div>
