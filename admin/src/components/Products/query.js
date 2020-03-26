@@ -10,5 +10,4 @@ export const productsAllQuery = gql`
             images
         }
     }
-
 `
