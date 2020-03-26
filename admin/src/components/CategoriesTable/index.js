@@ -1,7 +1,7 @@
 import React from "react"
 import { useQuery } from "@apollo/react-hooks"
 import { Table } from "antd"
-import { categoriesAllQuery } from "./query"
+import { categoriesAllQuery } from "../Categories/query"
 
 const styleIconInTable = { width: "20px", height: "20px", marginRight: "10px" }
 
