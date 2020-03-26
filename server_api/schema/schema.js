@@ -14,7 +14,7 @@ const ProductType = new GraphQLObjectType({
   fields: () => ({
     id: { type: GraphQLID },
     name: { type: new GraphQLNonNull(GraphQLString) },
-    price:  { type: new GraphQLNonNull(GraphQLInt) },
+    price: { type: new GraphQLNonNull(GraphQLInt) },
     images: { type: new GraphQLList(GraphQLString) },
     category: {
       type: CategoryType,
@@ -43,20 +43,24 @@ const CategoryType = new GraphQLObjectType({
 
 const Mutation = new GraphQLObjectType({
   name: "Mutation",
-  addProduct: {
-    type: ProductType,
-    args: {
-      name: { type: new GraphQLNonNull(GraphQLString) },
-      price: { type: new GraphQLNonNull(GraphQLInt) },
-      categoryId: { type: new GraphQLNonNull(GraphQLID) },
-      images: { type: new GraphQLList(GraphQLString) }
-    },
-    resolve(parent, { name, price, categoryId, images }) {
-      const product = new Products({
-        name,
-        price, categoryId, images
-      })
-      return product.save()
+  fields: {
+
+
+    addProduct: {
+      type: ProductType,
+      args: {
+        name: { type: new GraphQLNonNull(GraphQLString) },
+        price: { type: new GraphQLNonNull(GraphQLInt) },
+        categoryId: { type: new GraphQLNonNull(GraphQLID) },
+        images: { type: new GraphQLList(GraphQLString) }
+      },
+      resolve(parent, { name, price, categoryId, images }) {
+        const product = new Products({
+          name,
+          price, categoryId, images
+        })
+        return product.save()
+      }
     }
   }
 })
@@ -127,5 +131,6 @@ const Query = new GraphQLObjectType({
 })
 
 module.exports = new GraphQLSchema({
-  query: Query
+  query: Query,
+  mutation: Mutation
 })

@@ -34,13 +34,14 @@ const ProductsTable = () => {
       dataIndex: "category",
       key: "category",
       render: category => {
-        const { name, icons } = category
-        return <div><span>{name}</span>
+        const { name, icons, id } = category
+        return <div><span>{name} </span>
           {(icons.length !== 0)
             ? <img
               key={icons[0]} alt="img"
               src={icons[0]}
               style={styleIconInTable}/> : ""}
+          <span> {id}</span>
         </div>
       }
     },
