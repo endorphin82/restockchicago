@@ -44,8 +44,6 @@ const CategoryType = new GraphQLObjectType({
 const Mutation = new GraphQLObjectType({
   name: "Mutation",
   fields: {
-
-
     addProduct: {
       type: ProductType,
       args: {
@@ -54,12 +52,29 @@ const Mutation = new GraphQLObjectType({
         categoryId: { type: new GraphQLNonNull(GraphQLID) },
         images: { type: new GraphQLList(GraphQLString) }
       },
-      resolve(parent, { name, price, categoryId, images }) {
+      resolve(parent, { name, price, categoryId, images, icon }) {
         const product = new Products({
-          name,
-          price, categoryId, images
+          name, price, categoryId, images, icon
         })
         return product.save()
+      }
+    },
+    updateProduct: {
+      type: ProductType,
+      args: {
+        id: { type: GraphQLID },
+        name: { type: new GraphQLNonNull(GraphQLString) },
+        price: { type: new GraphQLNonNull(GraphQLInt) },
+        categoryId: { type: new GraphQLNonNull(GraphQLID) },
+        images: { type: new GraphQLList(GraphQLString) },
+        icon: { type: GraphQLString }
+      },
+      resolve(parent, { id, name, price, categoryId, images, icon }) {
+        return Products.findByIdAndUpdate(
+          id,
+          { $set: { name, price, categoryId, images, icon } },
+          { new: true }
+        )
       }
     }
   }

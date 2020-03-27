@@ -5,13 +5,13 @@ import PlusOutlined from "@ant-design/icons/lib/icons/PlusOutlined"
 import MinusCircleOutlined from "@ant-design/icons/lib/icons/MinusCircleOutlined"
 import { addProductMutation } from "../Products/mutations"
 
-const ProductsForm = ({visible, visibleSet}) => {
-  const [addProduct, { data }] = useMutation(addProductMutation);
-  const [values, setValues] = useState({name: '', price: 0, category: ''})
+const ProductsForm = ({ visible, visibleSet }) => {
+  const [addProduct, { data }] = useMutation(addProductMutation)
+  const [values, setValues] = useState({ name: "", price: 0, category: "" })
 
   const onFinish = values => {
     console.log("Received values of form:", values)
-    visibleSet(false);
+    visibleSet(false)
   }
   const handleOk = e => {
     e.preventDefault()
@@ -26,15 +26,18 @@ const ProductsForm = ({visible, visibleSet}) => {
     visibleSet(false)
   }
   const handleChange = e => {
-    const {name, value} = e.target
-    setValues({...values, [name]: value})
+    const { name, value } = e.target
+    setValues({ ...values, [name]: value })
   }
   return (
     <Modal
       title="Product information"
       visible={visible}
-      onOk={handleOk}
-      onCancel={handleCancel}
+      footer={false}
+      // onOk={onFinish}
+      // onCancel={handleCancel}
+      // okButtonProps={{htmlType: "submit" }}
+      // cancelButtonProps={{ htmlType: "submit" }}
     >
 
       <Form
@@ -51,7 +54,7 @@ const ProductsForm = ({visible, visibleSet}) => {
           label="Price"
           name="price"
           // noStyle
-          rules={[{required: true, message: "Price is required" }]}
+          rules={[{ required: true, message: "Price is required" }]}
         >
           <Input placeholder="Price $" style={{ width: "100%", marginRight: 8 }}/>
         </Form.Item>
@@ -60,7 +63,7 @@ const ProductsForm = ({visible, visibleSet}) => {
           label="Category"
           name="category"
           // noStyle
-          rules={[{ required: true, message: "Category is required" }]}
+          rules={[{ required: false, message: "Category is required" }]}
         >
           <Select onChange={handleChange} placeholder="Select category">
             <Select.Option value="Zhejiang">Zhejiang</Select.Option>
@@ -125,6 +128,9 @@ const ProductsForm = ({visible, visibleSet}) => {
         >
           <Input onChange={handleChange} placeholder="icon url" style={{ width: "100%", marginRight: 8 }}/>
         </Form.Item>
+        <Button type="primary" htmlType="submit">
+          Submit
+        </Button>
       </Form>
 
     </Modal>

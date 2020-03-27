@@ -5,7 +5,8 @@ const productSchema = new Schema({
   name: String,
   categoryId: String,
   price: Number,
-  images: [String]
+  images: [String],
+  icon: String
 })
 // price: { type: Number, get: getPrice, set: setPrice },
 // function getPrice(num) {
