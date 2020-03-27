@@ -1,4 +1,4 @@
-import React, { useState } from "react"
+import React, { useEffect, useState } from "react"
 import { Button, Form, Input, Modal, Select } from "antd"
 import { useMutation, useQuery } from "@apollo/react-hooks"
 import PlusOutlined from "@ant-design/icons/lib/icons/PlusOutlined"
@@ -6,23 +6,32 @@ import MinusCircleOutlined from "@ant-design/icons/lib/icons/MinusCircleOutlined
 import { addProductMutation, updateProductMutation } from "../Products/mutations"
 import { categoriesAllQuery } from "../Categories/query"
 
-const ProductsForm = ({ visible, visibleSet }) => {
+const ProductsForm = ({ prod, visible, visibleSet }) => {
   const [addProduct, {}] = useMutation(addProductMutation)
   const [updateProduct, {}] = useMutation(updateProductMutation)
   const { loading, error, data } = useQuery(categoriesAllQuery)
   const [values, setValues] = useState({ name: "", price: 0, category: "" })
-
+  useEffect(() => {
+    setValues(prod)
+  }, [prod])
+  console.log("values", values)
   const onFinish = values => {
     console.log("Received values of form:", values)
 
-    const { name, categoryId, images, icon } = values
+    const { id, name, categoryId, images, icon } = values
     const price = Number(values.price)
-    console.log(typeof price)
-    addProduct({
-      variables: {
-        name, price, categoryId, images, icon
-      }
-    })
+
+    id ?
+      updateProduct({
+        variables: {
+          id, name, price, categoryId, images, icon
+        }
+      })
+      : addProduct({
+        variables: {
+          name, price, categoryId, images, icon
+        }
+      })
     visibleSet(false)
   }
 
@@ -49,14 +58,25 @@ const ProductsForm = ({ visible, visibleSet }) => {
     >
 
       <Form
+        initialValues={{
+          ["price"]: values.price,
+          ["name"]: values.name,
+          ["images"]: values.images,
+          ["icon"]: values.icon
+          // ["categoryId"]: values.category.id
+
+        }}
         name="product" {...formItemLayoutWithOutLabel} onFinish={onFinish}>
         <Form.Item
           label="Name product"
           name="name"
+          // value={values.name}
+
           // noStyle
           rules={[{ required: true, message: "Name product is required" }]}
         >
-          <Input onChange={handleChange} placeholder="name product" style={{ width: "100%", marginRight: 8 }}/>
+          <Input onChange={handleChange} placeholder="name product"
+                 style={{ width: "100%", marginRight: 8 }}/>
         </Form.Item>
         <Form.Item
           label="Price"
@@ -64,7 +84,7 @@ const ProductsForm = ({ visible, visibleSet }) => {
           // noStyle
           rules={[{ required: true, message: "Price is required" }]}
         >
-          <Input type="number" value={0} placeholder="Price $" style={{ width: "100%", marginRight: 8 }}/>
+          <Input type="number" placeholder="Price $" style={{ width: "100%", marginRight: 8 }}/>
         </Form.Item>
 
         <Form.Item
@@ -72,13 +92,14 @@ const ProductsForm = ({ visible, visibleSet }) => {
           name="categoryId"
           // noStyle
           onChange={handleChange}
-          rules={[{ required: false, message: "Category is required" }]}
+          rules={[{ required: true, message: "Category is required" }]}
         >
           <Select placeholder="Select category">
             {categoriesAll.map(category =>
               <Select.Option
                 key={category.id}
-                value={category.id}>{category.name}</Select.Option>
+                // value={category.id}
+              >{category.name}</Select.Option>
             )
             }
           </Select>
@@ -107,7 +128,8 @@ const ProductsForm = ({ visible, visibleSet }) => {
                       ]}
                       noStyle
                     >
-                      <Input onChange={handleChange} placeholder="image url" style={{ width: "90%", marginRight: 8 }}/>
+                      <Input value={values.images[index]} onChange={handleChange} placeholder="image url"
+                             style={{ width: "90%", marginRight: 8 }}/>
                     </Form.Item>
                     {fields.length > 1 ? (
                       <MinusCircleOutlined

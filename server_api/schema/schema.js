@@ -76,6 +76,13 @@ const Mutation = new GraphQLObjectType({
           { new: true }
         )
       }
+    },
+    deleteProduct: {
+      type: ProductType,
+      args: { id: { type: GraphQLID } },
+      resolve(parent, { id }) {
+        return Products.findByIdAndRemove(id)
+      }
     }
   }
 })

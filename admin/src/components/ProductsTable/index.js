@@ -1,17 +1,48 @@
-import React from "react"
-import { useQuery } from "@apollo/react-hooks"
-import { Table } from "antd"
+import React, { useState } from "react"
+import { useMutation, useQuery } from "@apollo/react-hooks"
+import { Button, Modal, Table } from "antd"
 import { productsAllQuery } from "../Products/query"
+import { deleteProductMutation } from "../Products/mutations"
 
 const styleImagesInTable = { width: "50px", height: "100%", marginRight: "10px" }
 const styleIconInTable = { width: "20px", height: "100%", marginRight: "10px" }
 
-const ProductsTable = () => {
+const ProductsTable = ({ prodSet, visibleSet }) => {
   const { loading, error, data } = useQuery(productsAllQuery)
+  const [vis, visSet] = useState(false)
+  const [prod, pSet] = useState({})
+  const [deleteProduct, {}] = useMutation(deleteProductMutation)
 
   if (loading) return <p>Loading ... </p>
   const { productsAll } = data
-  console.log(productsAll)
+
+  const handleEdit = (id) => {
+    const product = productsAll.find(prod => prod.id === id)
+    prodSet(product)
+    visibleSet(true)
+    console.log("table", product)
+  }
+
+  const handleDelete = (id) => {
+    visSet(true)
+    const prod = productsAll.find(prod => prod.id === id)
+    pSet(prod)
+    console.log("table", prod)
+  }
+
+  const handleOk = (id) => {
+    deleteProduct({
+      variables: {
+        id
+      }
+    })
+    visSet(false)
+  }
+
+  const handleCancel = () => {
+    visSet(false)
+  }
+
 
   const columns = [
     {
@@ -63,12 +94,32 @@ const ProductsTable = () => {
           </div>
           : <span>no icons</span>
       }
+    },
+    {
+      title: "Actions",
+      dataIndex: "id",
+      key: "id",
+      render: (id) => <>
+        <Button onClick={handleEdit.bind(null, id)} type="dashed">
+          Edit
+        </Button>
+        <Button onClick={handleDelete.bind(null, id)} type="dashed" danger>
+          Delete
+        </Button>
+      </>
     }
   ]
   return (
     <>
       <Table dataSource={productsAll} columns={columns} rowKey="id"/>
-
+      <Modal
+        title="Delete product?"
+        visible={vis}
+        onOk={handleOk.bind(null, prod.id)}
+        onCancel={handleCancel}
+      >
+        <p>{prod.name}</p>
+      </Modal>
     </>
   )
 }

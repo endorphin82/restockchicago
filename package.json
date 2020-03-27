@@ -1,0 +1,20 @@
+{
+  "name": "restockchicago",
+  "version": "1.0.0",
+  "description": "https://www.restockchicago.com/ # speedpage  https://developers.google.com/speed/pagespeed/insights/?hl=RU&url=https%3A%2F%2Fendorphin82.github.io%2Frestockchicago%2F&tab=mobile",
+  "main": "index.js",
+  "scripts": {
+    "dev": "nodemon server_api/server/index.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/endorphin82/restockchicago.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/endorphin82/restockchicago/issues"
+  },
+  "homepage": "https://github.com/endorphin82/restockchicago#readme"
+}
