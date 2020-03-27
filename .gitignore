@@ -1,15 +1,23 @@
-# Created by .ignore support plugin (hsz.mobi)
-Будет удалено .idea/$CACHE_FILE$
-Будет удалено .idea/.gitignore
-Будет удалено .idea/inspectionProfiles/
-Будет удалено .idea/misc.xml
-Будет удалено .idea/modules.xml
-Будет удалено .idea/restockchicago.iml
-Будет удалено .idea/vcs.xml
-Будет удалено server_api/node_modules/
-Будет удалено .idea/jsLibraryMappings.xml
-Будет удалено .idea/codeStyles/
-Будет удалено .idea/dataSources.xml
-Будет удалено .idea/dictionaries/
+# See https://help.github.com/articles/ignoring-files/ for more about ignoring files.
 
+# dependencies
+/node_modules
+/.pnp
+.pnp.js
 
+# testing
+/coverage
+
+# production
+/build
+
+# misc
+.DS_Store
+.env.local
+.env.development.local
+.env.test.local
+.env.production.local
+
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
