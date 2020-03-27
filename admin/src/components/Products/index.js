@@ -5,7 +5,7 @@ import ProductsTable from "../ProductsTable"
 import ProductsForm from "../ProductsForm"
 
 const Products = () => {
-  const [visible, visibleSet] = useState(true)
+  const [visible, visibleSet] = useState(false)
   const onClickHandler = () => {
     visibleSet(true)
   }

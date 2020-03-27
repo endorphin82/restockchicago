@@ -14,15 +14,18 @@ const ProductsForm = ({ visible, visibleSet }) => {
 
   const onFinish = values => {
     console.log("Received values of form:", values)
+
+    const { name, categoryId, images, icon } = values
+    const price = Number(values.price)
+    console.log(typeof price)
+    addProduct({
+      variables: {
+        name, price, categoryId, images, icon
+      }
+    })
     visibleSet(false)
   }
-  const handleOk = e => {
-    e.preventDefault()
-    console.log(e)
-    // addProduct({variables: {
-    //   [type]: input[type].value
-    // }})
-  }
+
   const handleCancel = e => {
     e.preventDefault()
     console.log(e)
@@ -30,6 +33,7 @@ const ProductsForm = ({ visible, visibleSet }) => {
   }
   const handleChange = e => {
     const { name, value } = e.target
+
     setValues({ ...values, [name]: value })
   }
   const { categoriesAll = [] } = data
@@ -39,7 +43,7 @@ const ProductsForm = ({ visible, visibleSet }) => {
       visible={visible}
       footer={false}
       // onOk={onFinish}
-      // onCancel={handleCancel}
+      onCancel={handleCancel}
       // okButtonProps={{htmlType: "submit" }}
       // cancelButtonProps={{ htmlType: "submit" }}
     >
@@ -60,7 +64,7 @@ const ProductsForm = ({ visible, visibleSet }) => {
           // noStyle
           rules={[{ required: true, message: "Price is required" }]}
         >
-          <Input placeholder="Price $" style={{ width: "100%", marginRight: 8 }}/>
+          <Input type="number" value={0} placeholder="Price $" style={{ width: "100%", marginRight: 8 }}/>
         </Form.Item>
 
         <Form.Item
