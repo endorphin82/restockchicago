@@ -1,25 +1,31 @@
 import React, { useState } from "react"
 import { Button, Form, Input, Modal, Select } from "antd"
-import { useMutation } from "@apollo/react-hooks"
+import { useMutation, useQuery } from "@apollo/react-hooks"
 import PlusOutlined from "@ant-design/icons/lib/icons/PlusOutlined"
 import MinusCircleOutlined from "@ant-design/icons/lib/icons/MinusCircleOutlined"
-import { addProductMutation } from "../Products/mutations"
+import { addProductMutation, updateProductMutation } from "../Products/mutations"
+import { categoriesAllQuery } from "../Categories/query"
 
 const ProductsForm = ({ visible, visibleSet }) => {
-  const [addProduct, { data }] = useMutation(addProductMutation)
+  const [addProduct, {}] = useMutation(addProductMutation)
+  const [updateProduct, {}] = useMutation(updateProductMutation)
+  const { loading, error, data } = useQuery(categoriesAllQuery)
   const [values, setValues] = useState({ name: "", price: 0, category: "" })
 
   const onFinish = values => {
     console.log("Received values of form:", values)
+
+    const { name, categoryId, images, icon } = values
+    const price = Number(values.price)
+    console.log(typeof price)
+    addProduct({
+      variables: {
+        name, price, categoryId, images, icon
+      }
+    })
     visibleSet(false)
   }
-  const handleOk = e => {
-    e.preventDefault()
-    console.log(e)
-    // addProduct({variables: {
-    //   [type]: input[type].value
-    // }})
-  }
+
   const handleCancel = e => {
     e.preventDefault()
     console.log(e)
@@ -27,15 +33,17 @@ const ProductsForm = ({ visible, visibleSet }) => {
   }
   const handleChange = e => {
     const { name, value } = e.target
+
     setValues({ ...values, [name]: value })
   }
+  const { categoriesAll = [] } = data
   return (
     <Modal
       title="Product information"
       visible={visible}
       footer={false}
       // onOk={onFinish}
-      // onCancel={handleCancel}
+      onCancel={handleCancel}
       // okButtonProps={{htmlType: "submit" }}
       // cancelButtonProps={{ htmlType: "submit" }}
     >
@@ -56,18 +64,23 @@ const ProductsForm = ({ visible, visibleSet }) => {
           // noStyle
           rules={[{ required: true, message: "Price is required" }]}
         >
-          <Input placeholder="Price $" style={{ width: "100%", marginRight: 8 }}/>
+          <Input type="number" value={0} placeholder="Price $" style={{ width: "100%", marginRight: 8 }}/>
         </Form.Item>
 
         <Form.Item
           label="Category"
-          name="category"
+          name="categoryId"
           // noStyle
+          onChange={handleChange}
           rules={[{ required: false, message: "Category is required" }]}
         >
-          <Select onChange={handleChange} placeholder="Select category">
-            <Select.Option value="Zhejiang">Zhejiang</Select.Option>
-            <Select.Option value="Jiangsu">Jiangsu</Select.Option>
+          <Select placeholder="Select category">
+            {categoriesAll.map(category =>
+              <Select.Option
+                key={category.id}
+                value={category.id}>{category.name}</Select.Option>
+            )
+            }
           </Select>
         </Form.Item>
 
