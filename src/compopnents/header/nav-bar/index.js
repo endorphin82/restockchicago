@@ -36,15 +36,24 @@ const NavBar = ({ ActiveMenuItem, itemName, isOpenBurger, isMobile }) => {
     <div className={isOpenBurger ? "header__navbar navbar active" : "header__navbar navbar"}>
       <ul className="navbar__menu-list">
         <li className={itemName === "jordan" ? "active navbar__jordan navbar__icon" : "navbar__jordan navbar__icon"}>
-          <a href="#" onClick={() => handleClick("jordan")}/>
+          <a href="#" onClick={() => handleClick("jordan")}>           
+                       <img src={categoriesByListNames[0].icons[0]}/>
+                       <img className="img2" src={categoriesByListNames[0].icons[1]}/>
+          </a>
           <MenuItemJordan/>
         </li>
         <li className={itemName === "nike" ? "active navbar__nike navbar__icon" : "navbar__nike navbar__icon"}>
-          <a href="#" onClick={() => handleClick("nike")}/>
+          <a href="#" onClick={() => handleClick("nike")}>
+                        <img src={categoriesByListNames[1].icons[0]}/>
+                        <img className="img2" src={categoriesByListNames[1].icons[1]}/>
+          </a>
           <MenuItemNike/>
         </li>
         <li className={itemName === "adidas" ? "active navbar__adidas navbar__icon" : "navbar__adidas navbar__icon"}>
-          <a href="#" onClick={() => handleClick("adidas")}/>
+          <a href="#" onClick={() => handleClick("adidas")}>
+                        <img src={categoriesByListNames[2].icons[0]}/>
+                        <img className="img2" src={categoriesByListNames[2].icons[1]}/>
+          </a>
           <MenuItemAdidas/>
         </li>
         <li className={itemName === "supreme" ? "active" : ""}>
