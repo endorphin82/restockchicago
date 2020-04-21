@@ -3,7 +3,7 @@ import { gql } from "apollo-boost"
 export const categoriesByListNamesQuery = gql`
     query CategoriesByListNames($names: [String]){
         categoriesByListNames(names: $names){
-            id,
+            _id,
             name,
             icons
         }
