@@ -23,7 +23,7 @@ function App({ ToggleIsMobile }) {
       (window.innerWidth >= 770) ? ToggleIsMobile(false) : ToggleIsMobile(true)
     }
 
-    return () => window.removeListener("resize", screenTest)
+    return () => window.removeEventListener("resize", screenTest)
   })
   return (
     <div className="container">
